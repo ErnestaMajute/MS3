@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+
     {% for recipe in recipes %}
         {{ recipe.rec_name }}<br>
         {{ recipe.category_name }}<br>
@@ -14,6 +15,7 @@
         {% for method in recipe.methods %}
             {{ method }}<br>
         {% endfor %}
+        
     {% endfor %}
 
 {% endblock %}
