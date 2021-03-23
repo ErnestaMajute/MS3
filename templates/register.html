@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align">Register</h3>
+
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+            <div class="card-panel">
+                <!-- first and last name -->
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="fas fa-user prefix"></i>
+                        <input placeholder="First Name" id="first_name" name="first_name" type="text" class="validate">
+                        <label for="first_name"></label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Last Name" id="last_name" name="last_name" type="text" class="validate">
+                        <label for="last_name"></label>
+                    </div>
+                </div>
+                <!-- user name -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-circle prefix"></i>
+                        <input placeholder="User Name" id="user_name" name="user_name" type="text" class="validate">
+                        <label for="user_name"></label>
+                    </div>
+                </div>
+                <!-- password -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-lock prefix"></i>
+                        <input placeholder="Password" id="password" name="password" type="password" class="validate">
+                        <label for="password"></label>
+                    </div>
+                </div>
+                <!-- register button -->
+                <div class="row">
+                    <button type="submit" class="col s12 btn-large">
+                        Register
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
