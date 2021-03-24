@@ -10,11 +10,13 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="fas fa-user prefix"></i>
-                        <input placeholder="First Name" id="first_name" name="first_name" type="text" class="validate">
+                        <input placeholder="First Name" id="first_name" name="first_name" type="text" minlength="3"
+                        maxlength="20" pattern="^[a-zA-Z0-9]{3,20}$" class="validate" required>
                         <label for="first_name"></label>
                     </div>
                     <div class="input-field col s6">
-                        <input placeholder="Last Name" id="last_name" name="last_name" type="text" class="validate">
+                        <input placeholder="Last Name" id="last_name" name="last_name" type="text" minlength="4"
+                        maxlength="20" pattern="^[a-zA-Z0-9]{4,20}$" class="validate" required>
                         <label for="last_name"></label>
                     </div>
                 </div>
@@ -22,15 +24,17 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user-circle prefix"></i>
-                        <input placeholder="User Name" id="user_name" name="user_name" type="text" class="validate">
-                        <label for="user_name"></label>
+                        <input placeholder="User Name" id="username" name="username" type="text" minlength="8"
+                        maxlength="20" pattern="^[a-zA-Z0-9]{8,20}$" class="validate" required>
+                        <label for="username"></label>
                     </div>
                 </div>
                 <!-- password -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-lock prefix"></i>
-                        <input placeholder="Password" id="password" name="password" type="password" class="validate">
+                        <input placeholder="Password" id="password" name="password" type="password" minlength="8"
+                        maxlength="20" pattern="^[a-zA-Z0-9]{8,20}$" class="validate" required>
                         <label for="password"></label>
                     </div>
                 </div>
