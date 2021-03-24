@@ -1,3 +1,7 @@
 nav {
-    background-color: #0F292F;
+    background-color: #59253A;
+}
+
+.parallax-container {
+    height: 30vh;
 }
