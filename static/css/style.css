@@ -1,7 +1,30 @@
 nav {
-    background-color: #59253A;
+    background-color: #56282D;
 }
 
 .parallax-container {
-    height: 30vh;
+    height: min-content;
+}
+
+.card-icons {
+    color: #544343;
+    font-size: 35px;
+}
+
+.card-header {
+    color: #544343;
+    font-size: 
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.promotion-section {
+    background-color: #626D58;
+}
+
+.main-header {
+    color: #626D58;
 }
