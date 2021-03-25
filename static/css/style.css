@@ -6,14 +6,13 @@ nav {
     height: min-content;
 }
 
+.card-header {
+    color: #544343;
+}
+
 .card-icons {
     color: #544343;
     font-size: 35px;
-}
-
-.card-header {
-    color: #544343;
-    font-size: 
 }
 
 .responsive {
@@ -27,4 +26,21 @@ nav {
 
 .main-header {
     color: #626D58;
+}
+
+.promotion-font {
+    font-size: 20px;
+    color: white;
+}
+
+.wine {
+    color: #56282D;
+}
+
+.dark-liver {
+    color: #544343;
+}
+
+.btns-dark {
+    background-color: #544343;
 }
