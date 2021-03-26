@@ -26,8 +26,22 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login():
+    if request.method == "POST":
+        current_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if current_user:
+            if check_password_hash(current_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+
+            else:
+                return redirect(url_for("login"))
+
+        else:
+            return redirect(url_for("login"))
+
     return render_template("login.html")
 
 
