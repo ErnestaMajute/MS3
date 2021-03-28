@@ -76,3 +76,13 @@ nav {
 	-o-background-size: cover;
 	background-size: cover;
 }
+
+.recipes-container {
+    height: 80vh;
+	background: url("../css/images/recipes-marble.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+

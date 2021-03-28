@@ -1,18 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-<section class="recipes-section">
-    <div class=" container intro-container">
-        <div class="row center">
-            <form>
-                <div class="input-field">
-                    <input id="search" type="search" required>
-                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                    <i class="fas fa-times"></i>
-                </div>
-            </form>
+    <section class="recipes-container">
+        <div class=" container intro-container">
+            <div class="row card-panel grey lighten-5">
+                <form action="{{ url_for('search') }}" method="POST" class="col s12">
+                    <div class="row valign-wrapper center-align">
+                        <div class="input-field col s12 m12">
+                            <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                            <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                            <label for="query">Search Recipes</label>
+                        </div>
+                        <div class="col s12 m4">
+                            <a href="{{ url_for('get_all_recipes') }}" class="red btn text-shadow fas fa-redo">Reset</a>
+                            <button type="submit" class="light-blue darken-1 btn text-shadow">
+                                <i class="fas fa-search left"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
 
     {% if recipes|length > 0 %}
         <div class="container">
