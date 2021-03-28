@@ -83,9 +83,10 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-@app.route("/recipes")
-def recipes():
-    return render_template("recipes.html")
+@app.route("/get_all_recipes")
+def get_all_recipes():
+    recipes = list(mongo.db.recipes.find())
+    return render_template("recipes.html", recipes=recipes)
 
 
 if __name__ == "__main__":
