@@ -37,6 +37,10 @@ nav {
     color: #56282D;
 }
 
+.wine-back {
+    background-color: #56282D;
+}
+
 .dark-liver {
     color: #544343;
 }
@@ -84,5 +88,18 @@ nav {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+
+.intro-container {
+    padding-top: 20px;
+}
+
+.margin-fix {
+    margin-bottom: 0;
+}
+
+.buttons-col {
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
