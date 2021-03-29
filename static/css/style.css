@@ -82,7 +82,7 @@ nav {
 }
 
 .recipes-container {
-    height: 80vh;
+    min-height: 90vh;
 	background: url("../css/images/recipes-marble.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -101,5 +101,41 @@ nav {
 .buttons-col {
     margin-top: 20px;
     margin-bottom: 15px;
+}
+
+.recipe-image {
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.recipe-header {
+    margin-top: 0;
+}
+
+.rec-card {
+    margin-bottom: 7px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    min-height: 280px;
+    min-width: 280px;
+}
+
+.text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.img-sizing {
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.content-margin {
+    margin-bottom: 0;
 }
 
