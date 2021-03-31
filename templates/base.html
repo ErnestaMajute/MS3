@@ -21,17 +21,37 @@
         <!-- top navbar -->
         <nav class="text-shadow nav-extended">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo center ">CookEasy</a>
+                <a href="{{ url_for('index') }}" class="brand-logo left">CookEasy</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-user dark"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categories</a></li>
+                        <ul id="dropdown1" class="dropdown-content">
+                            <li><a href="#!" class="black-text">All-in-one </a></li>
+                            <li><a href="#!" class="black-text">Takeaway</a></li>
+                            <li><a href="#!" class="black-text">Cheap solutions</a></li>
+                            <li><a href="#!" class="black-text">Baked Goods</a></li>
+                            <li><a href="#!" class="black-text">For Kids</a></li>
+                            <li><a href="#!" class="black-text">Quick and easy</a></li>
+                            <li><a href="#!" class="black-text">Dishes</a></li>
+                            <li><a href="#!" class="black-text">Celebration dinners</a></li>
+                            <li><a href="#!" class="black-text">Cocktails and lemonades</a></li>
+                            <li><a href="#!" class="black-text">Vegetarian</a></li>
+                            <li><a href="#!" class="black-text">Vegan</a></li>
+                        </ul>
                     <li><a href="{{ url_for('get_all_recipes') }}">Recipes</a></li>
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
                     <li><a href="#">Log Out</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                 </ul>
-                <a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="fas fa-utensils"></i></a>
-                <ul id="dropdown1" class="dropdown-content">
+                
+            
+            </div>
+        </nav>
+
+        <!-- mobile sidenavbar -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Categories</a></li>
+                <ul id="dropdown2" class="dropdown-content">
                     <li><a href="#!" class="black-text">All-in-one </a></li>
                     <li><a href="#!" class="black-text">Takeaway</a></li>
                     <li><a href="#!" class="black-text">Cheap solutions</a></li>
@@ -44,13 +64,6 @@
                     <li><a href="#!" class="black-text">Vegetarian</a></li>
                     <li><a href="#!" class="black-text">Vegan</a></li>
                 </ul>
-            
-            </div>
-        </nav>
-
-        <!-- mobile sidenavbar -->
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('get_all_recipes') }}">Recipes</a></li>
             <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="#">Log Out</a></li>
