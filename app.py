@@ -23,11 +23,13 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    categories = list(mongo.db.categories.find())
+    return render_template("index.html", categories=categories)
 
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    categories = list(mongo.db.categories.find())
     if request.method == "POST":
         current_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -44,11 +46,12 @@ def login():
         else:
             return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("login.html",  categories=categories)
 
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    categories = list(mongo.db.categories.find())
     if request.method == "POST":
         current_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -69,7 +72,7 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Registration Completed")
         return redirect(url_for("profile", username=session["user"]))
-    return render_template("register.html")
+    return render_template("register.html", categories=categories)
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -85,8 +88,10 @@ def profile(username):
 
 @app.route("/get_all_recipes")
 def get_all_recipes():
+    categories = list(mongo.db.categories.find())
     recipes = list(mongo.db.recipes.find())
-    return render_template("recipes.html", recipes=recipes)
+    return render_template(
+        "recipes.html", recipes=recipes, categories=categories)
 
 
 @app.route("/search", methods=["GET", "POST"])
