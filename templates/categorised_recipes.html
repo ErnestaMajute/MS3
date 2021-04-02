@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3>hello</h3>
+    <div class="container">
+        <div class="row">
+            {% for recipe in recipes %}
+
+                <div class="col s12 l6">
+                    <div class="card-panel rec-card">
+                        <div class="card-main">
+                            <div class="row content-margin">
+                                <div class="recipe-image col s5 m5 center container">
+                                    <img class="img-sizing" alt="{{ recipe.rec_name }}" src="{{ recipe.rec_img }}">
+                                </div>
+                                <div class="content-margin col s7 m7 right container">
+                                    <h5 class="recipe-header"><strong>{{ recipe.rec_name }}</strong></h5>
+                                    <p><strong>Rating</strong></p>
+                                    <p class="text">{{ recipe.description }}</p>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="row recipe-footer">
+                                    <p class="col s4 center"><strong>Serves: {{ recipe.serves }}</strong></p>
+                                    <p class="col s4 center"><strong>Cooking time: {{ recipe.cook_time }} min</strong></p>
+                                    <p class="col s4 center"><strong>Level: {{ recipe.level }}</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
