@@ -97,9 +97,11 @@ def get_all_recipes():
 @app.route("/categorised_recipes/<get_category_name>")
 def categorised_recipes(get_category_name):
     categories = list(mongo.db.categories.find())
+    category = get_category_name
     recipes = mongo.db.recipes.find({'category_name': get_category_name})
     return render_template(
-        "categorised_recipes.html", categories=categories, recipes=recipes)
+        "categorised_recipes.html", categories=categories,
+        recipes=recipes, category=category)
 
 
 @app.route("/search", methods=["GET", "POST"])
