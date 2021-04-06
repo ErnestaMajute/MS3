@@ -4,9 +4,30 @@
     <section class="recipes-container">
         <div class="container intro-container">
             <div class="row">
-                <h3 class="center-align text-shadow wine">{{ recipe.rec_name }}</h3>
+                <h3 class="center-align text-shadow">{{ recipe.rec_name }}</h3>
             </div>
+            <div class="row center">
+                <a href="{{ url_for('recipe', recipe_id=recipe._id) }}" class="btn-floating tooltipped btn-large wine-back"><i class="fas fa-edit prefix center card-icons"></i></a>
+            </div> 
         </div>
+        <section class="recipe-container container">
+            <div class="recipe-content">
+                <div class="row">
+                    <div class="col s12 m6 l6">
+                        <img class="responsive-img" src={{ recipe.rec_img }} alt="{{ recipe.rec_name }}">
+                    </div><br>
+                    <div class="col s12 offset-s3 m6 offset-m4 l6">
+                        <blockquote><strong>Created by: {{ recipe.username }}</strong></blockquote>
+                        <blockquote><strong>Category: {{ recipe.category_name }}</strong></blockquote>
+                        <blockquote><strong>Cuisine: {{ recipe.cuisine_name }}</strong></blockquote>
+                        <blockquote><strong>Prep Time: {{ recipe.prep_time }} min</strong></blockquote>
+                        <blockquote><strong>Cooking Time: {{ recipe.cook_time }}</strong></blockquote>
+                        <blockquote><strong>Serves: {{ recipe.serves }}</strong></blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </section>
 
 {% endblock %}

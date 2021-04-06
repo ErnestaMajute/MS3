@@ -103,7 +103,6 @@ def recipe(recipe_id):
     return render_template("recipe.html", recipe=recipe)
 
 
-
 @app.route("/categorised_recipes/<get_category_name>")
 def categorised_recipes(get_category_name):
     categories = list(mongo.db.categories.find())
