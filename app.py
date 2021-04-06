@@ -96,6 +96,14 @@ def get_all_recipes():
         "recipes.html", recipes=recipes, categories=categories)
 
 
+@app.route("/recipe/<recipe_id>", methods=["GET", "POST"])
+def recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+    return render_template("recipe.html", recipe=recipe)
+
+
+
 @app.route("/categorised_recipes/<get_category_name>")
 def categorised_recipes(get_category_name):
     categories = list(mongo.db.categories.find())

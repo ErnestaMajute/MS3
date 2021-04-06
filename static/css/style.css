@@ -153,6 +153,9 @@ nav {
     margin-bottom: 0;
 }
 
+.link {
+    color: black;
+}
 
 @media (max-width: 767.98px) {
     .img-sizing {
