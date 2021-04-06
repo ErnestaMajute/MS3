@@ -165,4 +165,11 @@ nav {
     }
 }
 
+.recipe-container {
+    background-color: rgba(84, 67, 67, 0.2)
+}
+
+.recipe-content {
+    padding-top: 30px;
+}
 
