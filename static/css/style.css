@@ -90,6 +90,15 @@ nav {
 	background-size: cover;
 }
 
+.profile-container {
+    min-height: 90vh;
+	background: url("../css/images/recipes-marble.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 .intro-container {
     padding-top: 20px;
 }
