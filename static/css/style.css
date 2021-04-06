@@ -133,6 +133,7 @@ nav {
     padding-left: 15px;
     min-height: 280px;
     min-width: 280px;
+    max-height: 306px;
 }
 
 .text {
@@ -143,12 +144,22 @@ nav {
 }
 
 .img-sizing {
-    width: 200px;
-    height: 280px;
+    width: 120px;
+    height: 180px;
     object-fit: cover;
 }
 
 .content-margin {
     margin-bottom: 0;
 }
+
+
+@media (max-width: 767.98px) {
+    .img-sizing {
+        max-width: 115px;
+        max-height: 180px;
+        object-fit: cover;
+    }
+}
+
 
