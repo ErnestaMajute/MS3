@@ -99,7 +99,6 @@ def get_all_recipes():
 @app.route("/recipe/<recipe_id>", methods=["GET", "POST"])
 def recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-
     return render_template("recipe.html", recipe=recipe)
 
 
