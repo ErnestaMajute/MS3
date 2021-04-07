@@ -127,8 +127,30 @@ def search():
 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        recipe = {
+            "username": session["user"],
+            "rec_img": request.form.get("rec_img"),
+            "cuisine_name": request.form.get("cuisine_name"),
+            "category_name": request.form.get("category_name"),
+            "description": request.form.get("description"),
+            "rec_name": request.form.get("rec_name"),
+            "level": request.form.get("level"),
+            "prep_time": request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "serves": request.form.get("serves"),
+            "methods": request.form.get("method"),
+            "ingredients": request.form.get("ingredients")
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("You have posted your recipe", "success")
+        return redirect(url_for("index"))
+
     categories = list(mongo.db.categories.find())
     return render_template("add_recipe.html", categories=categories)
+
+    
+    
 
 
 if __name__ == "__main__":
