@@ -3,4 +3,5 @@ $(document).ready(function(){
     $(".dropdown-trigger").dropdown();
     $('.parallax').parallax();
     $('.tabs').tabs();
+    $("select").formSelect();
   });

@@ -125,6 +125,12 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/add_recipe", methods=["GET", "POST"])
+def add_recipe():
+    categories = list(mongo.db.categories.find())
+    return render_template("add_recipe.html", categories=categories)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
