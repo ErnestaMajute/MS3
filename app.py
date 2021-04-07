@@ -49,6 +49,12 @@ def login():
     return render_template("login.html",  categories=categories)
 
 
+@app.route("/logout")
+def logout():
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     categories = list(mongo.db.categories.find())
