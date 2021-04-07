@@ -203,3 +203,12 @@ blockquote {
 .tabs .tab a {
     color: #bb9597;
 }
+
+.add-container {
+    height: 100vh;
+	background: url("../css/images/login-greens.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
