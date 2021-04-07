@@ -183,4 +183,23 @@ nav {
  margin-right: auto;
 }
 
+blockquote {
+    border-left: 5px solid #56282d;
+}
 
+
+.tabs .indicator {
+    background-color: #56282d;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: #56282d14;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    color: #544343;
+}
+
+.tabs .tab a {
+    color: #bb9597;
+}
