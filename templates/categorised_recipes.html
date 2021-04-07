@@ -5,7 +5,13 @@
             <div class="container intro-container">
                 <div class="row">
                     <h3 class="center-align text-shadow wine">{{ category }}</h3>
-                    
+                
+                {% if session.user %}
+                    <div class="row center">
+                        <a href="{{ url_for('add_recipe') }}" class="btn-floating tooltipped btn-large wine-back"><i class="fas fa-folder-plus prefix center card-icons"></i></a>
+                    </div>
+                {% endif %} 
+
                     {% for recipe in recipes %}
                     
                         <div class="col s12 l6">

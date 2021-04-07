@@ -9,6 +9,13 @@
                 </h3>
             </div>
         </div>
+
+        {% if session.user %}
+            <div class="row center">
+                <a href="{{ url_for('add_recipe') }}" class="btn-floating tooltipped btn-large wine-back"><i class="fas fa-folder-plus prefix center card-icons"></i></a>
+            </div>
+        {% endif %}
+        
         <div class="container">
             <div class="row">
                 {% for recipe in recipes %}
