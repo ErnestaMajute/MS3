@@ -60,9 +60,13 @@
                     <!-- servings/level -->
                     <div class="row">
                         <div class="input-field col s6">
-                            <input placeholder="Easy/Medium/Hard" id="level" name="level" type="text" minlength="1"
-                                class="validate" required>
-                            <label for="level">Level</label>
+                            <select id="level" name="level" class="validate" required>
+                                <option value="" disabled selected>Choose Level</option>
+                                <option value="Easy">Easy</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Hard">Hard</option>
+                            </select>
+					        <label for="level">Recipe Level</label>
                         </div>
                         <div class="input-field col s6">
                             <input placeholder="2" id="serves" name="serves" type="text" minlength="1"
