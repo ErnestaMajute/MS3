@@ -10,6 +10,10 @@ nav {
     color: #544343;
 }
 
+.card-panel {
+    margin-top: 20px;
+}
+
 .card-icons {
     color: #544343;
     font-size: 35px;
