@@ -247,3 +247,11 @@ blockquote {
 .cancel {
     background-color: grey;
 }
+
+.brand-logo {
+    margin-left: 10px;
+}
+
+.capitalized {
+    text-transform: capitalize;
+}
