@@ -266,3 +266,12 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+.footer-container {
+    background-color: #56282d;
+}
+
+.footer-icons {
+    color: #b2a4a4;
+    font-size: 1.85rem;
+}
