@@ -242,3 +242,8 @@ blockquote {
 .btn:hover, .btn-large:hover, .btn-small:hover {
     background-color: #56282d91;
 }
+
+
+.cancel {
+    background-color: grey;
+}
