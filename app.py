@@ -59,6 +59,7 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    # getting session user's username from database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     recipes = mongo.db.recipes.find({'username': username})
@@ -72,7 +73,10 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
+    # remove user from session cookie
     session.pop("user")
+    flash("See you comming back")
+
     return redirect(url_for("login"))
 
 
