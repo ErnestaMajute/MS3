@@ -222,3 +222,23 @@ blockquote {
 .flashes {
     margin-bottom: 0;
 }
+
+.modal.modal-fixed-footer {
+    max-height: 210px;
+    max-width: 450px;
+    
+}
+
+.modal-question {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 15px;
+} 
+
+.modal .modal-footer {
+    text-align: center;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color: #56282d91;
+}
