@@ -83,12 +83,13 @@ def logout():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     categories = list(mongo.db.categories.find())
+    # check if username already in database
     if request.method == "POST":
         current_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if current_user:
-            flash("Username exists already")
+            flash("That username already exists")
             return redirect(url_for("register"))
 
         register = {
@@ -97,12 +98,14 @@ def register():
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
+
         mongo.db.users.insert_one(register)
 
-        # new user to session cookie
+        # add new user to session cookie
         session["user"] = request.form.get("username").lower()
-        flash("Registration Completed")
-        return redirect(url_for("profile", username=session["user"]))
+        flash("User Registration Successful! Please Login")
+        return redirect(url_for("login"))
+
     return render_template("register.html", categories=categories)
 
 
