@@ -22,20 +22,21 @@
         <div class="recipe-container container">
             <div class="recipe-content">
                 <div class="row">
-                    <div class="col s12 m6 l6">
+                    <div class="col s12 m6 l6 center-align">
                         <img class="responsive-img" src="{{ recipe.rec_img }}" alt="{{ recipe.rec_name }}">
                         
                     </div><br>
-                    <div class="col s12 m6 offset-m4 l6">
-                        <div class="row">
-                            <h3 class="text-shadow">{{ recipe.rec_name }}</h3>
+                    <div class="col s12 m6 l6">
+                        <div class="recipe-description">
+                            <h4 class="text-shadow recipe-header">{{ recipe.rec_name }}</h4>
+                        
+                            <blockquote><strong>Created by: {{ recipe.username }}</strong></blockquote>
+                            <blockquote><strong>Category: {{ recipe.category_name }}</strong></blockquote>
+                            <blockquote><strong>Cuisine: {{ recipe.cuisine_name }}</strong></blockquote>
+                            <blockquote><strong>Prep Time: {{ recipe.prep_time }} min</strong></blockquote>
+                            <blockquote><strong>Cooking Time: {{ recipe.cook_time }} min</strong></blockquote>
+                            <blockquote><strong>Serves: {{ recipe.serves }}</strong></blockquote>
                         </div>
-                        <blockquote><strong>Created by: {{ recipe.username }}</strong></blockquote>
-                        <blockquote><strong>Category: {{ recipe.category_name }}</strong></blockquote>
-                        <blockquote><strong>Cuisine: {{ recipe.cuisine_name }}</strong></blockquote>
-                        <blockquote><strong>Prep Time: {{ recipe.prep_time }} min</strong></blockquote>
-                        <blockquote><strong>Cooking Time: {{ recipe.cook_time }} min</strong></blockquote>
-                        <blockquote><strong>Serves: {{ recipe.serves }}</strong></blockquote>
                     </div>
                 </div>
                 <div class="row">
@@ -48,14 +49,14 @@
                     <div id="ingredients" class="col s12">
                         <ul>
                             {% for ingredient in recipe.ingredients.splitlines() %}
-                                <li><strong>&bull;&nbsp;{{ ingredient }}</strong><li><br>
+                                <li><strong>&bull;&nbsp;{{ ingredient }}</strong></li><br>
                             {% endfor %}
                         </ul>
                     </div>
                     <div id="steps" class="col s12">
                         <ul>
                             {% for method in recipe.methods.splitlines() %}
-                                <li><strong>&bull;&nbsp;{{ method }}</strong><li><br>
+                                <li><strong>&bull;&nbsp;{{ method }}</strong></li><br>
                             {% endfor %}
                         </ul>
                     </div>

@@ -183,13 +183,13 @@ nav {
 }
 
 .responsive-img{
- border-radius: 10%;
- margin-top: 15px;
- max-height: 350px;
- max-width: 40%;
- display: block;
- margin-left: auto;
- margin-right: auto;
+    border-radius: 10%;
+    margin-top: 15px;
+    max-height: 350px;
+    max-width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 blockquote {
@@ -282,4 +282,17 @@ main {
 .footer-icons {
     color: #b2a4a4;
     font-size: 1.85rem;
+}
+
+.recipe-header {
+    margin-top:0;
+}
+
+@media (max-width: 600px) {
+    .recipe-description {
+        margin-left: 20px;
+    }
+    .recipe-header {
+    margin-top: 10px;
+}
 }
