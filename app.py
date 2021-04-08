@@ -27,6 +27,8 @@ def index():
     return render_template("index.html", categories=categories)
 
 
+# login function's core taken from TaskManager|miniproject
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -71,6 +73,8 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# logout function's core taken from TaskManager|miniproject
+
 @app.route("/logout")
 def logout():
     # remove user from session cookie
@@ -79,6 +83,8 @@ def logout():
 
     return redirect(url_for("login"))
 
+
+# register function's core taken from TaskManager|miniproject
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -113,6 +119,7 @@ def register():
 def get_all_recipes():
     categories = list(mongo.db.categories.find())
     recipes = list(mongo.db.recipes.find())
+
     return render_template(
         "recipes.html", recipes=recipes, categories=categories)
 
@@ -120,6 +127,7 @@ def get_all_recipes():
 @app.route("/recipe/<recipe_id>", methods=["GET", "POST"])
 def recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
     return render_template("recipe.html", recipe=recipe)
 
 
