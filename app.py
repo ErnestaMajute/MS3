@@ -44,10 +44,15 @@ def login():
                 return redirect(url_for("profile", username=session["user"]))
 
             else:
+                # passwords not matching
+                flash("The user name or password is incorrect")
                 return redirect(url_for("login"))
 
         else:
+            # user not existing
+            flash("The user name or password is incorrect")
             return redirect(url_for("login"))
+
     categories = list(mongo.db.categories.find())
     return render_template("login.html",  categories=categories)
 
