@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="error-container">
+        <div class="container centered">
+            <div class="row">
+                <div class="col s12">
+                    <h1 class="center white-text"><strong>Oops!<br>500</strong></h1>
+                    <h4 class="center white-text">Internal Server Error</h4><br>
+                    <div class="row center">
+                        <a href="{{ url_for('index') }}" class="btn go-home">Go Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
