@@ -30,7 +30,7 @@
                         <div class="recipe-description">
                             <h4 class="text-shadow recipe-header">{{ recipe.rec_name }}</h4>
                         
-                            <blockquote><strong>Created by: {{ recipe.username }}</strong></blockquote>
+                            <blockquote><strong>Created by:<a href="{{ url_for('user_recipes', user_username=recipe.username) }}">{{ recipe.username }}</a></strong></blockquote>
                             <blockquote><strong>Category: {{ recipe.category_name }}</strong></blockquote>
                             <blockquote><strong>Cuisine: {{ recipe.cuisine_name }}</strong></blockquote>
                             <blockquote><strong>Prep Time: {{ recipe.prep_time }} min</strong></blockquote>

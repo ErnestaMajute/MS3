@@ -73,6 +73,17 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/user_recipes/<user_username>", methods=["GET", "POST"])
+def user_recipes(user_username):
+    # allows users to see other users recipes
+    user = mongo.db.users.find_one({"username": user_username})
+    username = mongo.db.users.find_one(
+        {"username": user_username})["username"]
+    recipes = mongo.db.recipes.find({"username": user_username})
+    return render_template(
+        "user_recipes.html", user=user, username=username, recipes=recipes)
+
+
 # logout function's core taken from TaskManager|miniproject
 
 @app.route("/logout")
