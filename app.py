@@ -209,6 +209,12 @@ def delete_recipe(recipe_id):
     return redirect(url_for('profile', username=session['user']))
 
 
+@ app.errorhandler(404)
+def page_not_found(error):
+    # Renders error page when error 404 occurs
+    return render_template('404.html'), 404
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
