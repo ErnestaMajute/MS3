@@ -112,6 +112,15 @@ nav {
     background-size: cover;
 }
 
+.error-container {
+    min-height: 71.8vh;
+	background: url("../css/images/404-image.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+    background-size: cover;
+}
+
 .intro-container {
     padding-top: 20px;
 }
@@ -299,4 +308,9 @@ main {
 
 .login-form {
     margin-top: 40px;    
+}
+
+
+.go-home {
+    background-color: #5a5a5a;
 }
