@@ -258,15 +258,34 @@ def delete_recipe(recipe_id):
         return redirect(url_for('login'))
 
 
+# --------------------------- Exception Handling ---------------------------
+
+
 @ app.errorhandler(404)
 def page_not_found(error):
-    # Renders error page when error 404 occurs
-    return render_template('404.html'), 404
+    """
+    Renders error page when error 404 occurs
+    """
+    return render_template(
+        '404.html',
+        error_message="The page you were looking for does not exist",
+        error_code=404), 404
 
 
 @app.errorhandler(500)
 def internal_error(error):
-    return render_template('500.html'), 500
+    return render_template(
+        'error.html',
+        error_message="Internal Server Error", error_code=500), 500
+
+
+@app.errorhandler(Exception)
+def internal_error(error):
+    print(error)
+    return render_template(
+        'error.html',
+        error_message="Looks like you tried to access something which doesn't exist",
+        error_code=500), 500
 
 
 if __name__ == "__main__":
