@@ -20,6 +20,13 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+def is_logged_in():
+    """
+    Check if the user is stored in session (logged in)
+    """
+    return session.get("user")
+
+
 @app.route("/")
 @app.route("/index")
 def index():
