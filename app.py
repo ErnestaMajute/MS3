@@ -30,14 +30,19 @@ def is_logged_in():
 @app.route("/")
 @app.route("/index")
 def index():
+    """
+    Index/Home page
+    """
     categories = list(mongo.db.categories.find())
     return render_template("index.html", categories=categories)
 
 
-# login function's core taken from TaskManager|miniproject
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    login function's core taken from TaskManager|miniproject
+    Logs user into website
+    """
     if request.method == "POST":
         # check if user already in db
         current_user = mongo.db.users.find_one(
