@@ -73,15 +73,16 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """
+    User's profile displays user's uploaded recipes
+    """
     # getting session user's username from database
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    recipes = mongo.db.recipes.find({'username': username})
-
-    if session["user"]:
+    if is_logged_in():
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        recipes = mongo.db.recipes.find({'username': username})
         return render_template(
             "profile.html", username=username, recipes=recipes)
-
     return redirect(url_for("login"))
 
 
