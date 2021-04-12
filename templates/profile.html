@@ -13,6 +13,7 @@
         {% if session.user %}
             <div class="row center">
                 <a href="{{ url_for('add_recipe') }}" class="btn-floating tooltipped btn-large wine-back"><i class="fas fa-folder-plus prefix center card-icons"></i></a>
+                <a href="{{ url_for('favourites', user=session.user) }}" class="btn-floating tooltipped btn-large wine-back"><i class="fas fa-folder-add prefix center card-icons"></i></a>
             </div>
         {% endif %}
         
