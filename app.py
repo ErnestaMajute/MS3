@@ -78,11 +78,13 @@ def profile(username):
     """
     # getting session user's username from database
     if is_logged_in():
+        user = mongo.db.users.find_one(
+            {"username": session["user"]})
         username = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
         recipes = mongo.db.recipes.find({'username': username})
         return render_template(
-            "profile.html", username=username, recipes=recipes)
+            "profile.html", username=username, user=user, recipes=recipes)
     return redirect(url_for("login"))
 
 
@@ -310,13 +312,13 @@ def internal_error(error):
         error_message="Internal Server Error", error_code=500), 500
 
 
-@app.errorhandler(Exception)
-def internal_error(error):
-    print(error)
-    return render_template(
-        'error.html',
-        error_message="Looks like you tried to access something which doesn't exist",
-        error_code=500), 500
+#@app.errorhandler(Exception)
+#def internal_error(error):
+    #print(error)
+    #return render_template(
+        #'error.html',
+        #error_message="Looks like you tried to access something which doesn't exist",
+        #error_code=500), 500
 
 
 if __name__ == "__main__":
