@@ -110,10 +110,12 @@ def logout():
     return redirect(url_for("login"))
 
 
-# register function's core taken from TaskManager|miniproject
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Allows users to create account in a website
+    register function's core taken from TaskManager|miniproject
+    """
     categories = list(mongo.db.categories.find())
     # check if username already in database
     if request.method == "POST":
@@ -128,7 +130,8 @@ def register():
             "first_name": request.form.get("first_name").lower(),
             "last_name": request.form.get("last_name").lower(),
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
+            "favourite_recipes": []
         }
 
         mongo.db.users.insert_one(register)
