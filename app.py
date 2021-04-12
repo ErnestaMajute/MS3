@@ -127,12 +127,29 @@ def add_favourite(recipe_id):
         # checks if recipe in a list
         if ObjectId(recipe_id) not in favourites_list:
             mongo.db.users.update_one({"username": session['user']},
-            {"$push": {"favourite_recipes": ObjectId(recipe_id)}})
+                {"$push": {"favourite_recipes": ObjectId(recipe_id)}})
             flash("Recipe added to your Favourites list")
         else:
             flash("Recipe already in your Favourites list")
     return redirect(
         url_for("recipe", user=user["username"], recipe_id=recipe_id))
+
+
+@app.route("/delete_favourite/<recipe_id>", methods=["GET", "POST"])
+def delete_favourite(recipe_id):
+    """
+    Allows user to delete recipe from his Favourites list
+    """
+    if is_logged_in():
+        user = mongo.db.users.find_one({"username": session['user']})
+        favourites_list = user['favourite_recipes']
+        if ObjectId(recipe_id) in favourites_list:
+            mongo.db.users.update(
+                {"username": session["user"]},
+                {"$pull": {"favourite_recipes": ObjectId(recipe_id)}})
+            flash("Recipe removed from Favourites recipe's list.")
+        return redirect(url_for(
+            "recipe", user=user["username"], recipe_id=recipe_id))
 
 
 @app.route("/logout")
@@ -315,13 +332,13 @@ def internal_error(error):
         error_message="Internal Server Error", error_code=500), 500
 
 
-@app.errorhandler(Exception)
-def internal_error(error):
-    print(error)
-    return render_template(
-        'error.html',
-        error_message="Looks like you tried to access something which doesn't exist",
-        error_code=500), 500
+#@app.errorhandler(Exception)
+#def internal_error(error):
+    #print(error)
+    #return render_template(
+        #'error.html',
+        #error_message="Looks like you tried to access something which doesn't exist",
+        #error_code=500), 500
 
 
 if __name__ == "__main__":

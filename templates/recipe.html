@@ -7,6 +7,7 @@
                     {% if session.user %}
                         {% if session.user|lower != recipe.username|lower %}
                             <a href="{{ url_for('add_favourite', recipe_id=recipe._id) }}" class="btn-floating tooltipped btn-large wine-back"><i class="fas fa-heart prefix center card-icons"></i></a>
+                            <a href="{{ url_for('delete_favourite', recipe_id=recipe._id) }}" class="btn-floating tooltipped btn-large wine-back"><i class="fas fa-heart-broken prefix center card-icons"></i></a>
                         {% endif %}
                     {% endif %}
                     {% if session.user|lower == recipe.username|lower %}
