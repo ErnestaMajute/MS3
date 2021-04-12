@@ -312,13 +312,13 @@ def internal_error(error):
         error_message="Internal Server Error", error_code=500), 500
 
 
-#@app.errorhandler(Exception)
-#def internal_error(error):
-    #print(error)
-    #return render_template(
-        #'error.html',
-        #error_message="Looks like you tried to access something which doesn't exist",
-        #error_code=500), 500
+@app.errorhandler(Exception)
+def internal_error(error):
+    print(error)
+    return render_template(
+        'error.html',
+        error_message="Looks like you tried to access something which doesn't exist",
+        error_code=500), 500
 
 
 if __name__ == "__main__":
