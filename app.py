@@ -128,6 +128,9 @@ def add_favourite(recipe_id):
         if ObjectId(recipe_id) not in favourites_list:
             mongo.db.users.update_one({"username": session['user']},
             {"$push": {"favourite_recipes": ObjectId(recipe_id)}})
+            flash("Recipe added to your Favourites list")
+        else:
+            flash("Recipe already in your Favourites list")
     return redirect(
         url_for("recipe", user=user["username"], recipe_id=recipe_id))
 
