@@ -242,9 +242,20 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
-    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("Your recipe deleted")
-    return redirect(url_for('profile', username=session['user']))
+    """
+    Check if the user trying to delete the
+    object is the same as the object author
+    """
+    if is_logged_in():
+        recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+        if recipe["username"] == session["user"]:
+            mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+            flash("Your recipe was deleted successfully")
+        else:
+            flash("You're not the author of this recipe")
+        return redirect(url_for('profile', username=session['user']))
+    else:
+        return redirect(url_for('login'))
 
 
 @ app.errorhandler(404)
