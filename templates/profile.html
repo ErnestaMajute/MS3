@@ -16,10 +16,13 @@
                 <a href="{{ url_for('favourites', user=session.user) }}" class="btn-floating tooltipped btn-large wine-back"><i class="fas fa-heart prefix center card-icons"></i></a>
             </div>
         {% endif %}
-        
+             
         <div class="container">
             <div class="row">
-                {% for recipe in userf_recipes %}
+                {% if recipes|length == 0 %}
+                    <h4 class="center">Want to add a recipe? It's easy. Click a button above.</h4>
+                {% endif %}
+                {% for recipe in recipes %}
         
                     <div class="col s12 l6">
                         <div class="card-panel rec-card">

@@ -18,8 +18,12 @@
         
         <div class="container">
             <div class="row">
+
+                {% if favourites_list|length == 0 %}
+                    <h4 class="center">Your Favourites list is empty.</h4>
+                {% endif %}
+
                 {% for recipe in userf_recipes %}
-        
                     <div class="col s12 l6">
                         <div class="card-panel rec-card">
                             <div class="card-main">
@@ -43,9 +47,7 @@
                             </div>
                         </div>
                     </div>
-
-                {% endfor %}
-                
+                {% endfor %}                
             </div>
         </div>
     </section>
