@@ -88,7 +88,9 @@ def profile(username):
 
 @app.route("/user_recipes/<user_username>", methods=["GET", "POST"])
 def user_recipes(user_username):
-    # allows users to see other users recipes
+    """
+    Allows users to see other users recipes
+    """
     user = mongo.db.users.find_one({"username": user_username})
     username = mongo.db.users.find_one(
         {"username": user_username})["username"]
@@ -97,14 +99,14 @@ def user_recipes(user_username):
         "user_recipes.html", user=user, username=username, recipes=recipes)
 
 
-# logout function's core taken from TaskManager|miniproject
-
 @app.route("/logout")
 def logout():
-    # remove user from session cookie
+    """
+    Remove user from session cookie
+    Logout function's core taken from TaskManager|miniproject
+    """
     session.pop("user")
     flash("See you comming back")
-
     return redirect(url_for("login"))
 
 
