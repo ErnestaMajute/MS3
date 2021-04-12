@@ -146,22 +146,29 @@ def register():
 
 @app.route("/get_all_recipes")
 def get_all_recipes():
+    """
+    Shows all uploaded recipes
+    """
     categories = list(mongo.db.categories.find())
     recipes = list(mongo.db.recipes.find())
-
     return render_template(
         "recipes.html", recipes=recipes, categories=categories)
 
 
 @app.route("/recipe/<recipe_id>", methods=["GET", "POST"])
 def recipe(recipe_id):
+    """
+    Shows chosen individual recipe
+    """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-
     return render_template("recipe.html", recipe=recipe)
 
 
 @app.route("/categorised_recipes/<get_category_name>")
 def categorised_recipes(get_category_name):
+    """
+    Displays recipes which match chosen category
+    """
     categories = list(mongo.db.categories.find())
     category = get_category_name
     recipes = mongo.db.recipes.find({'category_name': get_category_name})
@@ -172,9 +179,29 @@ def categorised_recipes(get_category_name):
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """
+    Function allows user to search for recipe with keyword
+    """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
+
+
+def get_recipe_data(form) -> dict:
+    return {
+            "username": session["user"],
+            "rec_img": form.get("rec_img"),
+            "cuisine_name": form.get("cuisine_name"),
+            "category_name": form.get("category_name"),
+            "description": form.get("description"),
+            "rec_name": form.get("rec_name"),
+            "level": form.get("level"),
+            "prep_time": int(form.get("prep_time")),
+            "cook_time": int(form.get("cook_time")),
+            "serves": int(form.get("serves")),
+            "methods": form.get("method"),
+            "ingredients": form.get("ingredients")
+        }
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
