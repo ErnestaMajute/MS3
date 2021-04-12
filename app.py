@@ -99,6 +99,37 @@ def user_recipes(user_username):
         "user_recipes.html", user=user, username=username, recipes=recipes)
 
 
+@app.route("/favourites/<user>")
+def favourites(user):
+    """
+    Displays user's favourite recipes
+    """
+    if is_logged_in():
+        user = mongo.db.users.find_one({"username": user})
+        favourites_list = user["favourite_recipes"]
+        userf_recipes = mongo.db.recipes.find(
+            {"_id": {"$in": favourites_list}})
+    return render_template(
+        "favourites.html", user=user,
+        favourites_list=favourites_list, userf_recipes=userf_recipes)
+
+
+@app.route("/add_favourite/<recipe_id>", methods=["GET", "POST"])
+def add_favourite(recipe_id):
+    """
+    Function to add recipe to user's favourites list
+    """
+    if is_logged_in():
+        user = mongo.db.users.find_one({"username": session["user"]})
+        favourites_list = user['favourite_recipes']
+        # checks if recipe in a list
+        if ObjectId(recipe_id) not in favourites_list:
+            mongo.db.users.update_one({"username": session['user']},
+            {"$push": {"favourite_recipes": ObjectId(recipe_id)}})
+    return redirect(
+        url_for("recipe", user=user["username"], recipe_id=recipe_id))
+
+
 @app.route("/logout")
 def logout():
     """

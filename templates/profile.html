@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col s12 m8 offset-m2">
                 <h3 class="center-align capitalized black-text">
-                    {{ username }}'s recipes
+                    {{ user.first_name }}'s recipes
                 </h3>
             </div>
         </div>
@@ -18,7 +18,7 @@
         
         <div class="container">
             <div class="row">
-                {% for recipe in recipes %}
+                {% for recipe in userf_recipes %}
         
                     <div class="col s12 l6">
                         <div class="card-panel rec-card">
