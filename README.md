@@ -315,3 +315,8 @@ After these steps, CookEasy is now deployed to Heroku and can be viewed [here.](
 ### Content
 Background and recipe images were found in [www.pexels.com](https://www.pexels.com/)
 Big thanks Karolina Grabowska, her pictures were used for backgrounds.
+
+Python functions which were taken from miniProject: TaskManager by CodeInstitute marked in app.py file
+
+## Acknowledgments
+I would like to thank my family for helping me to test this website. Also big thanks to my mentor Reuben Ferrante who helped me a lot during this project.
