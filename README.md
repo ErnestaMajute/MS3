@@ -55,4 +55,26 @@ Goal of this website is to provide users with visually appealing recipe website,
 
  #### Backgrounds
 
-  I chose background images which represents food, like herbs and peppers. In most pages I used marble table surface image.
+ I chose background images which represents food, like herbs and peppers. In most pages I used marble table surface image.
+
+## Features
+
+ ### Existing Features
+
+ * Navbar - provides easy navigation thru the webpage, for non-registred/registred users. By using navbar user can go to any page of website. Contains logo CookEasy link, which link to index page.
+ * Index page - welcomes new and current users, provides information what users can do on website. Top section greets and provides button for registration Index page promotes brand betterkichen, contains button (for design purposes, no link) to link users to betterkitchen website.
+ * Recipes page - contains all users recipes which currently in database. Each recipe has a card, which contains recipe image, name, small description, number of servings, cooking time, difficulty level. Recipe name links to individual recipe view.
+ * Categorised recipes page - contains category's name header and recipes cards, recipes displayed matches category e.g. All-in-one, Cheap Solution, Vegetarian, Vegan...
+ * Recipe page - shows individual recipe, contains image, recipe name, category, creator, cuisine, cooking time, prep-time, servings, ingredients,preparation steps. If user non-registered buttons not provided. If user are not a recipe creator, page provides button with heart/broken-heart icon for user to add or remove recipe to/from his Favourite recipes list. If user is recipe creator, page provides two buttons. One button lets edit recipe, other button with trash bin icon, lets user to delete recipe.
+ * User Recipes page - when user opens individual recipe, she/he can click on created by: link, which links to recipe's creator profile. Which contains all creator's recipes. Page displays user's header, and recipes cards.
+ * Profile page - contains header, button with folder icon to add recipe. Heart icon button to link user to his/hers Favourite recipes page.
+ * Favourites page - only if user registered he/she can have Favourite recipes page. Contains header, button to add recipe and recipe card with Favourite recipes.
+ * Add/Edit recipe pages - add recipe page has form with input fields for user to fill in new recipe details, and add recipe button. Edit recipe also contains same form, but imput fields already has content which can be modified, also contains add recipe button.
+ * Register page - contains form where new user can fill in his details and create an account. Form has a link on the bottom for user to log in if she/he already registered to a website. Form also contains Register button.
+ * Login page - displays form where registered user can fill in his username and password and login to profile. Form has a link to a registration page on the bottom, for non-registered users. Form has login button.
+ * Footer - displays CookEasy address, phone number, and email with icons, social media links. Footer has contact details for betterkithen (promoted brand) shop. 
+
+ ### Future Features
+ * Add rating functionality, and let users leave comments for recipes.
+ * Let user to change their username, email address, or reset password
+ * Let user to download recipe as PDF file.
