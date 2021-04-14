@@ -173,3 +173,118 @@ Goal of this website is to provide users with visually appealing recipe website,
  * [Heroku](https://www.heroku.com/)
  * [MongoDB](https://www.mongodb.com/)
  * Chrome Developer Tools
+
+## Testing
+
+### Validation
+Code validated with:
+ * [W3C validator HTML](https://validator.w3.org/) :
+ * [CSS validator JIGSAW](https://jigsaw.w3.org/css-validator/): PASS
+ * [JSHint validator](https://jshint.com/) : PASS
+ * [Python validator](http://pep8online.com/): PASS
+
+### Browsers
+Website tested on Google Chrome, Microsoft Edge, Opera, Safari and Firefox browsers.
+
+### Design responsiveness
+Site tested on different device sizes by using Chrome Developer Tools. Shared link with family members who checked responsiveness on their own devices.
+### Links and Buttons
+All links and buttons tested, with no issues.
+### Test: JavaScript
+1. sidenav
+    * Sidenav shows up on small and medium devices. On the right side.
+        * PASS
+2. dropdown
+    * When clicked on Categories, dropdown menu shows up with categories. Reachable from all pages. Works on all devices.
+        * PASS
+3. parallax
+    * Moves at different speed than bottom content while scroling.
+        * PASS
+4. tabs
+    * Then when you click on each tab, only the container with the corresponding tab id will become visible.
+        * PASS
+5. formSelect
+    * provides list of categories, or levels, allows select. in add/edit recipe page.
+        * PASS
+6. modal
+    * If user want's to delete recipe, clicks button and modal shows up, to make sure user want's to delete recipe. has cancel and comfirm buttons.
+        * PASS       
+
+### Test: Python
+
+1. Navbar
+    * Home logo - check if home link works from all pages in a website. 
+        * PASS
+    * Categories dropdown and links - check if all categories displayed, links to correct chosen categories from all pages in a website.
+        * PASS
+    * Recipies link - check if link directs to all recipes page, check if it works from all pages in a website.
+        * PASS
+    * Add Recipe (registered user) - check if it links to page with form from all website pages.
+        * PASS
+    * Profile link (registered user) - links to user's profile with user's recipes. Works from all pages in a website.
+        * PASS
+    * Favourites page (registered user) - links to user's Favourites recipes list. Works from all website pages.
+        * PASS
+    * Log Out - Log's out user from session. Open Log In form.
+        * PASS
+    * Log In - opens page with log in form.
+        * PASS
+    * Register - opens form for user to register new account.
+        * PASS
+2. index route
+    * Check if link to index page work from all other pages
+        * PASS
+3. login route 
+    * If username and password matches database data user loged in to the profile.
+        * PASS
+    * If password not matching with database data flash message appears
+        * PASS
+    * If user doesn't exists, flash message appears
+        * PASS
+4. register route 
+    * Checks if username already in database, if, returns flash message
+        * PASS
+    * If username not in database, inputs from form inserted to users collection in a database. After succefull registration, user linked to login page, flash message appears
+        * PASS
+5. profile route
+    * If user loged in page displays all user's uploaded recipes from db.
+        * PASS
+    * Otherwise links to a log in page
+        * PASS
+6. user_recipes route
+    * When individual recipe's creator's link(username) cliked, user linked to recipe's creator's page with all recipes.
+        * PASS
+7. favourites route
+    * If user loged in page displays user's favourite recipes from users collection, favourite_recipes list, with user name header
+        * PASS
+8. add_favourite route
+    * If user loged in function checks if recipe not in his favourites list already, if not recipe_id added to users collection to favourite_recipes list.
+        * PASS
+8. delete_favourite route
+    * If user loged in, function checks if recipe_id in favourite_recipes list. If recipe_id in list and user want to remove it, recipe_id removed from users collection, favourite_recipes list. Return flash message.
+        * PASS
+9. get_all_recipes route 
+    * Function displays all recipes which are in database
+        * PASS
+10. recipe route
+    * Recipe function returns recipe from database by using recipe_id.
+        * PASS
+11. categorised_recipes route
+    * Displays recipes which matches selected category in a database.
+        * PASS
+12. search route
+    * Function returns all recipes which has same word as query is. Matches with recipe name and description.
+        * PASS
+13. add_recipe route
+    * If user loged in and form filled, function request data from form, and isert's data to database recipes collection. Provides flash message
+        * PASS
+14. edit_recipe route
+    * Function requests for data from databse, if changes were made updates recipe. Displays flash message.
+        * PASS
+15. delete_recipe route
+    * If user wants to delete recipe, function function checks if user is recipe creator function removes recipe from database.
+        * PASS
+    * If user not a creator of recipe, user linked to his profile with flash message.
+16. error handler Exception, 404, 500
+    * If error occurs proper message and error code provided in a page
+        * PASS
