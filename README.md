@@ -47,3 +47,12 @@ Goal of this website is to provide users with visually appealing recipe website,
     * Log In: opens page where user fill's in his username and password
     * Register: opens page where user can fill in his details and create an account
  
+## Design
+ #### Colors
+ ![Pallete](static/css/images/pallete-readme.png)
+
+ I chose these shades to create warmth and depth. Looks elegant and at the same time reminds colors of nature.
+
+ #### Backgrounds
+
+  I chose background images which represents food, like herbs and peppers. In most pages I used marble table surface image.
