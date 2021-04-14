@@ -147,3 +147,29 @@ Goal of this website is to provide users with visually appealing recipe website,
 	]
 }
 ```
+
+## Technologies used
+
+### Languages
+
+ * [HTML5](https://www.w3schools.com/html/)
+ * [CSS](https://www.w3schools.com/css/)
+ * [Python](https://www.w3schools.com/python/)
+ * [JavaScript](https://www.w3schools.com/js/default.asp)
+
+### Libraries
+
+ * [Materialize](https://materializecss.com/)
+ * [FontAwesome](https://fontawesome.com/)
+ * [PyMongo](https://pymongo.readthedocs.io/en/stable/)
+ * [Flask](https://palletsprojects.com/p/flask/)
+ * [Jinja](https://palletsprojects.com/p/jinja/)
+ * [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
+
+### Tools
+
+ * [GitHub](https://github.com/)
+ * [GitPod](https://gitpod.io/)
+ * [Heroku](https://www.heroku.com/)
+ * [MongoDB](https://www.mongodb.com/)
+ * Chrome Developer Tools
