@@ -126,8 +126,8 @@ def add_favourite(recipe_id):
         favourites_list = user['favourite_recipes']
         # checks if recipe in a list
         if ObjectId(recipe_id) not in favourites_list:
-            mongo.db.users.update_one({"username": session['user']},
-                {"$push": {"favourite_recipes": ObjectId(recipe_id)}})
+            mongo.db.users.update_one({"username": session['user']}, {
+                "$push": {"favourite_recipes": ObjectId(recipe_id)}})
             flash("Recipe added to your Favourites list")
         else:
             flash("Recipe already in your Favourites list")
@@ -332,13 +332,13 @@ def internal_error(error):
         error_message="Internal Server Error", error_code=500), 500
 
 
-#@app.errorhandler(Exception)
-#def internal_error(error):
-    #print(error)
-    #return render_template(
-        #'error.html',
-        #error_message="Looks like you tried to access something which doesn't exist",
-        #error_code=500), 500
+@app.errorhandler(Exception)
+def internal_error(error):
+    print(error)
+    return render_template(
+        'error.html',
+        error_message="You tried to access something, which doesn't exist",
+        error_code=500), 500
 
 
 if __name__ == "__main__":
