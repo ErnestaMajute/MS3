@@ -78,3 +78,72 @@ Goal of this website is to provide users with visually appealing recipe website,
  * Add rating functionality, and let users leave comments for recipes.
  * Let user to change their username, email address, or reset password
  * Let user to download recipe as PDF file.
+
+## Database
+
+ ### Data Storage Types
+
+ Types of data stored in database for this website:
+ * ObjectId
+ * String
+ * Integer
+ * Array
+
+ ### Collections Data Structure
+ 
+ #### Categories collection
+
+```
+{
+	"_id": {"$oid":"6058a0b5954649aea6db0675"},
+	"category_name":"All-in-one"
+}
+```
+
+ #### Recipes collection
+
+ ```
+ {
+	"_id":{"$oid":"606f39ae8bd1fdc354520d53"},
+	"username":"admin",
+	"rec_img":"https://images.pexels.com/photos/6120506/pexels-photo-6120506.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+	"cuisine_name":"Indian",
+	"category_name":"Vegan",
+	"description":"Vegan dish with legumes, full with fragrant spices and curry. Fast and comforting dish.",
+	"rec_name":"Curry Lentils",
+	"level":"Easy",
+	"prep_time":"3",
+	"cook_time":"55",
+	"serves":"2",
+	"methods":
+		    "In a pot bring 6 cups of water to a boil. Add 160g lentils and split peas.\r\n
+		    Add spices and chopped up garlic. Cook for 50 minutes on a medium.\r\n
+		    In a separate pot, bring 2 cups of water to a boil. Add 100g of brown rice. Cook the rice until water is absorbed on a medium. Never mix rice during cooking.\r\n
+		    Add the frozen veggies to the lentils and peas and cook for an additional 5 minutes or until veggies are equally hot as the lentils and peas.",
+	"ingredients":
+		    "160g lentils and split peas\r\n
+            4 tbsp mild yellow curry powder\r\n
+            Pinch of salt\r\n
+            6 garlic cloves\r\n
+            1 tsp oregano\r\n
+            160g of vegetables\r\n
+            100g brown rice"
+}
+```
+
+#### Users collection
+```
+{
+	"_id":{"$oid":"605e0712cf2553618f8dd984"},
+	"first_name":"ernesta","
+	last_name":"majute",
+	"username":"admin",
+	"password":"pbkdf2:sha256:150000$kpGwvqOp$1110699a8be6a22dd8fe42c277cf5b477ae36184a40f3d7bee10248162a90bca",
+	"favourite_recipes":[
+            {"$oid":"606f3a218bd1fdc354520d54"},
+            {"$oid":"606f3a528bd1fdc354520d55"},
+            {"$oid":"6071f22b60dd578467acdcae"},
+            {"$oid":"606f02b3199a74252dfdbdf6"}
+	]
+}
+```
