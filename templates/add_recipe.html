@@ -48,13 +48,13 @@
                         <!-- preparation/cooking time -->
                         <div class="row">
                             <div class="input-field col s6">
-                                <input placeholder="20" id="prep_time" name="prep_time" type="text" minlength="1"
-                                    class="validate" required>
+                                <input placeholder="20" id="prep_time" name="prep_time" type="text" minlength="1" maxlength="3"
+                                    pattern="^[0-9]{1,3}$" class="validate" required>
                                 <label for="prep_time">Preparation Time</label>
                             </div>
                             <div class="input-field col s6">
-                                <input placeholder="30" id="cook_time" name="cook_time" type="text" minlength="1"
-                                    class="validate" required>
+                                <input placeholder="30" id="cook_time" name="cook_time" type="text" minlength="1" maxlength="3"
+                                    pattern="^[0-9]{1,3}$" class="validate" required>
                                 <label for="cook_time">Cooking Time</label>
                             </div>
                         </div>
@@ -70,8 +70,8 @@
                                 <label for="level">Recipe Level</label>
                             </div>
                             <div class="input-field col s6">
-                                <input placeholder="2" id="serves" name="serves" type="text" minlength="1"
-                                    class="validate" required>
+                                <input placeholder="2" id="serves" name="serves" type="text" minlength="1" maxlength="3"
+                                    pattern="^[0-9]{1,3}$" class="validate" required>
                                 <label for="serves">Servings</label>
                             </div>
                         </div>
