@@ -1,9 +1,68 @@
+/*---------------------Navbar-----*/
+
 nav {
     background-color: #56282D;
 }
 
+.brand-logo {
+    margin-left: 10px;
+}
+
+/*---------------------Index page-----*/
+
 .parallax-container {
     height: 300px;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.main-header {
+    color: #626D58;
+}
+
+.promotion-font {
+    font-size: 20px;
+    color: white;
+}
+
+.promotion-section {
+    background-color: #626D58;
+}
+
+.intro-container {
+    padding-top: 20px;
+}
+
+/*---------------------Recipes page-----*/
+
+.recipes-container {
+    min-height: 71.8vh;
+	background: url("../css/images/recipes-marble.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+    background-size: cover;  
+}
+
+.rec-card {
+    margin-bottom: 7px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    min-height: 280px;   
+    max-height: 306px;
+}
+
+.content-margin {
+    margin-bottom: 0;
 }
 
 .card-header {
@@ -19,110 +78,10 @@ nav {
     font-size: 35px;
 }
 
-.input-field>label {
-    color: #615a5a;
-}
-
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.responsive {
+.img-sizing {
     width: 100%;
-    height: auto;
-}
-
-.promotion-section {
-    background-color: #626D58;
-}
-
-.main-header {
-    color: #626D58;
-}
-
-.promotion-font {
-    font-size: 20px;
-    color: white;
-}
-
-.wine {
-    color: #56282D;
-}
-
-.wine-back {
-    background-color: #56282D;
-}
-
-.dark-liver {
-    color: #544343;
-}
-
-.btns-dark {
-    background-color: #544343;
-}
-
-.register-header {
-    margin-top: 0;
-}
-
-.register-container {
-    min-height: 71.8vh;
-	background: url("../css/images/register-spices.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-.centered {
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    width: 80%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.login-container {
-    min-height: 71.8vh;
-	background: url("../css/images/login-greens.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-.recipes-container {
-    min-height: 71.8vh;
-	background: url("../css/images/recipes-marble.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-    background-size: cover;
-    
-}
-
-.profile-container {
-    min-height: 71.8vh;
-	background: url("../css/images/recipes-marble.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-    background-size: cover;
-}
-
-.error-container {
-    min-height: 71.8vh;
-	background: url("../css/images/404-image.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-    background-size: cover;
-}
-
-.intro-container {
-    padding-top: 20px;
+    height: 170px;
+    object-fit: cover;
 }
 
 .margin-fix {
@@ -133,6 +92,22 @@ nav {
     margin-top: 20px;
     margin-bottom: 15px;
 }
+/*---------------------Add recipe page-----*/
+
+.add-container {
+    min-height: 71.8vh;
+	background: url("../css/images/login-greens.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/*---------------------Recipe page-----*/
+
+.recipe-container {
+    background-color: rgba(84, 67, 67, 0.2)
+}
 
 .recipe-image {
     padding-right: 10px;
@@ -141,49 +116,6 @@ nav {
 
 .recipe-header {
     margin-top: 0;
-}
-
-.rec-card {
-    margin-bottom: 7px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 15px;
-    padding-left: 15px;
-    min-height: 280px;   
-    max-height: 306px;
-}
-
-.text {
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
-
-.img-sizing {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-}
-
-.content-margin {
-    margin-bottom: 0;
-}
-
-.link {
-    color: black;
-}
-
-@media (max-width: 767.98px) {
-    .img-sizing {
-        width: 100%;
-        max-height: 180px;
-        object-fit: cover;
-    }
-}
-
-.recipe-container {
-    background-color: rgba(84, 67, 67, 0.2)
 }
 
 .recipe-content {
@@ -199,11 +131,6 @@ nav {
     margin-left: auto;
     margin-right: auto;
 }
-
-blockquote {
-    border-left: 5px solid #56282d;
-}
-
 
 .tabs .indicator {
     background-color: #56282d;
@@ -221,23 +148,8 @@ blockquote {
     color: #bb9597;
 }
 
-.add-container {
-    min-height: 71.8vh;
-	background: url("../css/images/login-greens.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-.flashes-bck {
-    background-color: #56282dab;
-    margin: 0;
-    line-height: 2;
-}
-
-.flashes {
-    margin-bottom: 0;
+blockquote {
+    border-left: 5px solid #56282d;
 }
 
 .modal.modal-fixed-footer {
@@ -256,22 +168,64 @@ blockquote {
     text-align: center;
 }
 
-.btn:hover, .btn-large:hover, .btn-small:hover {
-    background-color: #56282d91;
-}
-
-
 .cancel {
     background-color: grey;
 }
 
-.brand-logo {
-    margin-left: 10px;
+/*---------------------Favourites page-----*/
+.text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
-.capitalized {
-    text-transform: capitalize;
+/*---------------------Register page-----*/
+
+.register-container {
+    min-height: 71.8vh;
+	background: url("../css/images/register-spices.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
+
+.register-header {
+    margin-top: 0;
+}
+
+.input-field>label {
+    color: #615a5a;
+}
+
+/*---------------------Login-----*/
+
+.login-container {
+    min-height: 71.8vh;
+	background: url("../css/images/login-greens.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.login-form {
+    margin-top: 40px;    
+}
+
+/*---------------------Profile page-----*/
+
+.profile-container {
+    min-height: 71.8vh;
+	background: url("../css/images/recipes-marble.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+    background-size: cover;
+}
+
+/*---------------------Universal-----*/
 
 body {
     display: flex;
@@ -279,9 +233,78 @@ body {
     flex-direction: column;
 }
 
+.capitalized {
+    text-transform: capitalize;
+}
+
+.link {
+    color: black;
+}
+
 main {
     flex: 1 0 auto;
 }
+
+.recipe-header {
+    margin-top:0;
+}
+
+.wine {
+    color: #56282D;
+}
+
+.wine-back {
+    background-color: #56282D;
+}
+
+.dark-liver {
+    color: #544343;
+}
+
+.btns-dark {
+    background-color: #544343;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color: #56282d91;
+}
+
+.flashes-bck {
+    background-color: #56282dab;
+    margin: 0;
+    line-height: 2;
+}
+
+.flashes {
+    margin-bottom: 0;
+}
+
+/*---------------------Errors-----*/
+
+.error-container {
+    min-height: 71.8vh;
+	background: url("../css/images/404-image.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+    background-size: cover;
+}
+
+.go-home {
+    background-color: #5a5a5a;
+}
+
+.centered {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 80%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*---------------------Footer-----*/
 
 .footer-container {
     background-color: #56282d;
@@ -292,8 +315,14 @@ main {
     font-size: 1.85rem;
 }
 
-.recipe-header {
-    margin-top:0;
+/*---------------------@media-----*/
+
+@media (max-width: 767.98px) {
+    .img-sizing {
+        width: 100%;
+        max-height: 180px;
+        object-fit: cover;
+    }
 }
 
 @media (max-width: 600px) {
@@ -303,13 +332,4 @@ main {
     .recipe-header {
     margin-top: 10px;
     }
-}
-
-.login-form {
-    margin-top: 40px;    
-}
-
-
-.go-home {
-    background-color: #5a5a5a;
 }
