@@ -288,3 +288,24 @@ All links and buttons tested, with no issues.
 16. error handler Exception, 404, 500
     * If error occurs proper message and error code provided in a page
         * PASS
+
+## Deployment
+[Heroku](https://www.heroku.com/) has been used to deploy this website. 
+
+### **Deployment to Heroku**
+
+1. You need to create Heroku account, if not a user.
+2. Create a new app in Heroku. Set your current region.
+3. Link new app to your Github repository via the "Deploy" tab.
+4. In the settings tab, navigate to "Config Vars" and add five fields.
+    * `IP: 0.0.0.0`
+    * `PORT: 5000`
+    * `MONGO_DBNAME: recipeBook`
+    * `MONGO_URI: mongodb+srv://:@myfirstcluster-2jd1l.mongodb.net/myRecipeDB?retryWrites=true`
+    * `SECRET_KEY: ************`
+5. Within Gitpod workspace terminal, create 'Procfile':
+    * `$ echo web: python run.py > Procfile`
+6. Push repository to Heroku:
+    * `$ git push heroku master`
+
+After these steps, CookEasy is now deployed to Heroku and can be viewed [here.](https://em-cookbook.herokuapp.com/)
