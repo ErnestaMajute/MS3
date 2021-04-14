@@ -309,3 +309,9 @@ All links and buttons tested, with no issues.
     * `$ git push heroku master`
 
 After these steps, CookEasy is now deployed to Heroku and can be viewed [here.](https://em-cookbook.herokuapp.com/)
+
+## Credits
+
+### Content
+Background and recipe images were found in [www.pexels.com](https://www.pexels.com/)
+Big thanks Karolina Grabowska, her pictures were used for backgrounds.
