@@ -56,14 +56,14 @@
                     <div id="ingredients" class="col s12">
                         <ul>
                             {% for ingredient in recipe.ingredients.splitlines() %}
-                                <li><strong>&bull;&nbsp;{{ ingredient }}</strong></li><br>
+                                <li><strong>&bull;&nbsp;{{ ingredient }}</strong></li>
                             {% endfor %}
                         </ul>
                     </div>
                     <div id="steps" class="col s12">
                         <ul>
                             {% for method in recipe.methods.splitlines() %}
-                                <li><strong>&bull;&nbsp;{{ method }}</strong></li><br>
+                                <li><strong>&bull;&nbsp;{{ method }}</strong></li>
                             {% endfor %}
                         </ul>
                     </div>
