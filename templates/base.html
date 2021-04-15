@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAwesome CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" type="text/css" />
+    <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
@@ -18,7 +20,7 @@
 <body>
 
     <header>
-        <!-- top navbar -->
+        <!-- Categories list-1 dropdown Materialize -->
         <ul id="categories_list1" class="dropdown-content">
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'All-in-one') }}"
                     class="black-text">All-in-one</a></li>
@@ -37,12 +39,13 @@
                     class="black-text">Vegetarian</a></li>
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegan') }}" class="black-text">Vegan</a></li>
         </ul>
-
+        <!-- Navigation bar Materialize -->
         <nav class="nav-extended">
             <div class="nav-wrapper">
                 <a href="{{ url_for('index') }}" class="brand-logo left">CookEasy</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-user dark"></i></a>
                 <ul class="right hide-on-med-and-down">
+                    <!-- Dropdown trigger -->
                     <li><a class="dropdown-trigger" href="#!" data-target="categories_list1">Categories</a></li>                        
                     <li><a href="{{ url_for('get_all_recipes') }}">Recipes</a></li>
                     {% if session.user %}
@@ -58,7 +61,7 @@
             </div>
         </nav>
 
-        <!-- mobile sidenavbar -->
+        <!-- Categories list-2 dropdown Materialize -->
         <ul id="categories_list2" class="dropdown-content">
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'All-in-one') }}"
                     class="black-text">All-in-one</a></li>
@@ -77,8 +80,9 @@
                     class="black-text">Vegetarian</a></li>
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegan') }}" class="black-text">Vegan</a></li>
         </ul>
-
+        <!-- Mobile sidenavbar Materialize -->
         <ul class="sidenav" id="mobile-demo">
+            <!-- Dropdown trigger -->
             <li><a class="dropdown-trigger" href="#!" data-target="categories_list2">Categories</a></li>                
             <li><a href="{{ url_for('get_all_recipes') }}">Recipes</a></li>
             {% if session.user %}
@@ -94,7 +98,7 @@
     </header>
 
     <section>
-        <!-- flash messages -->
+        <!-- Flash messages -->
         {% with messages = get_flashed_messages() %}
             {% if messages  %}
                 {% for message in messages %}
@@ -109,7 +113,7 @@
 
     {% block content %}
     {% endblock %}
-
+    <!-- Materialize Footer -->
     <footer class="page-footer footer-container">
         <div class="container">
             <div class="row">
@@ -146,7 +150,7 @@
             </div>
         </div>
     </footer>
-
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
