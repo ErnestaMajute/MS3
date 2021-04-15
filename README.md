@@ -189,7 +189,7 @@ Goal of this website is to provide users with visually appealing recipe website,
 
 ### Validation
 Code validated with:
- * [W3C validator HTML](https://validator.w3.org/) :
+ * [W3C validator HTML](https://validator.w3.org/) : PASS
  * [CSS validator JIGSAW](https://jigsaw.w3.org/css-validator/): PASS
  * [JSHint validator](https://jshint.com/) : PASS
  * [Python validator](http://pep8online.com/): PASS
