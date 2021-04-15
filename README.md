@@ -58,6 +58,11 @@ Goal of this website is to provide users with visually appealing recipe website,
 
  I chose background images which represents food, like herbs and peppers. In most pages I used marble table surface image.
 
+## Wireframes and Screenshots
+
+* [Mobile Screenshots](static/css/images/screenshots)
+* [Wireframes](static/css/images/wireframes)
+
 ## Features
 
  ### Existing Features
@@ -338,6 +343,7 @@ https://deliciouslysprinkled.com/soft-sugar-cookies/
 
 Background and recipe images were found in [www.pexels.com](https://www.pexels.com/)
 Big thanks Karolina Grabowska, her pictures were used for backgrounds.
+http://ami.responsivedesign.is/# to check responsiveness
 
 Python functions which were taken from miniProject: TaskManager by CodeInstitute marked in app.py file
 
