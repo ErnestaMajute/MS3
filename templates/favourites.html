@@ -3,13 +3,14 @@
 
     <section class="profile-container">
         <div class="row">
+            <!-- User's header -->
             <div class="col s12 m8 offset-m2">
                 <h3 class="center-align capitalized black-text">
                     {{ user.first_name }}'s Favourites
                 </h3>
             </div>
         </div>
-
+        <!-- Add Recipe button if user loged in -->
         {% if session.user %}
             <div class="row center">
                 <a href="{{ url_for('add_recipe') }}" class="btn-floating tooltipped btn-large wine-back"><i class="fas fa-folder-plus prefix center card-icons"></i></a>
@@ -18,11 +19,11 @@
         
         <div class="container">
             <div class="row">
-
+                <!-- Header if user's Favourites list is empty -->
                 {% if favourites_list|length == 0 %}
                     <h4 class="center">Your Favourites list is empty.</h4>
                 {% endif %}
-
+                <!-- Favourite recipes cards -->
                 {% for recipe in userf_recipes %}
                     <div class="col s12 l6">
                         <div class="card-panel rec-card">
