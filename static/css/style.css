@@ -44,7 +44,7 @@ nav {
 
 .recipes-container {
     min-height: 71.8vh;
-	background: url("../css/images/recipes-marble.jpg") no-repeat center center fixed;
+	background: url("../css/images/recipes-marble.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -96,7 +96,7 @@ nav {
 
 .add-container {
     min-height: 71.8vh;
-	background: url("../css/images/login-greens.jpg") no-repeat center center fixed;
+	background: url("../css/images/login-greens.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -184,7 +184,7 @@ blockquote {
 
 .register-container {
     min-height: 71.8vh;
-	background: url("../css/images/register-spices.jpg") no-repeat center center fixed;
+	background: url("../css/images/register-spices.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -203,7 +203,7 @@ blockquote {
 
 .login-container {
     min-height: 71.8vh;
-	background: url("../css/images/login-greens.jpg") no-repeat center center fixed;
+	background: url("../css/images/login-greens.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -218,7 +218,7 @@ blockquote {
 
 .profile-container {
     min-height: 71.8vh;
-	background: url("../css/images/recipes-marble.jpg") no-repeat center center fixed;
+	background: url("../css/images/recipes-marble.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
