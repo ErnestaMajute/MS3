@@ -5,6 +5,7 @@
         <div class=" container intro-container">
             <h3 class="center-align text-shadow wine">All Recipes</h3>
             <div class="row grey lighten-5">
+                <!-- Form to search recipes -->
                 <form action="{{ url_for('search') }}" method="POST" class="col s12">
                     <div class="row margin-fix center-align">
                         <div class="input-field col s12 m8">
@@ -13,7 +14,9 @@
                             <label for="query">Search Recipe</label>
                         </div>
                         <div class="col s12 m4 buttons-col">
+                            <!-- Button to reset results -->
                             <a href="{{ url_for('get_all_recipes') }}" class="wine-back btn">Reset</a>
+                            <!-- Button for searching -->
                             <button type="submit" class="wine-back btn">
                                 Search
                             </button>
@@ -21,23 +24,18 @@
                     </div>
                 </form>
             </div>
-
+            <!-- Add Recipe button if user loged in -->
             {% if session.user %}
                 <div class="row center">
                     <a href="{{ url_for('add_recipe') }}" class="btn-floating tooltipped btn-large wine-back"><i class="fas fa-folder-plus prefix center card-icons"></i></a>
-                </div>
-                
-            {% endif %}
-
-            
+                </div>   
+            {% endif %}    
         </div>
-    
-        {% if recipes|length > 0 %}
-    
-            <div class="container">
-                <div class="row">                  
-                    {% for recipe in recipes %}
-        
+
+        <div class="container">
+            <div class="row">
+                <!-- Cards for recipes -->                
+                 {% for recipe in recipes %}
                     <div class="col s12 l6">
                         <div class="card-panel rec-card">
                             <div class="card-main">
@@ -50,24 +48,17 @@
                                         <p class="text">{{ recipe.description }}</p>
                                     </div>
                                 </div>
-                                <div class="">
-                                    <div class="row recipe-footer">
-                                        <p class="col s4 center"><strong>Serves: {{ recipe.serves }}</strong></p>
-                                        <p class="col s4 center"><strong>Cooking time: {{ recipe.cook_time }} min</strong></p>
-                                        <p class="col s4 center"><strong>Level: {{ recipe.level }}</strong></p>
-                                    </div>
+                                <div class="row recipe-footer">
+                                    <p class="col s4 center"><strong>Serves: {{ recipe.serves }}</strong></p>
+                                    <p class="col s4 center"><strong>Cooking time: {{ recipe.cook_time }} min</strong></p>
+                                    <p class="col s4 center"><strong>Level: {{ recipe.level }}</strong></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
                 {% endfor %}
-
             </div>
         </div>
-    
-        {% endif %}
-
     </section>
     
 {% endblock %}
