@@ -19,23 +19,31 @@
 
     <header>
         <!-- top navbar -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'All-in-one') }}"
+                    class="black-text">All-in-one</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Cheap Solutions') }}" class="black-text">Cheap
+                    Solutions</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Baked goods') }}" class="black-text">Baked
+                    goods</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'For Kids') }}" class="black-text">For Kids</a>
+            </li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Quick and easy') }}" class="black-text">Quick
+                    and easy</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Celebration dinners') }}"
+                    class="black-text">Celebration dinners</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Dishes') }}" class="black-text">Dishes</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegetarian') }}"
+                    class="black-text">Vegetarian</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegan') }}" class="black-text">Vegan</a></li>
+        </ul>
+
         <nav class="nav-extended">
             <div class="nav-wrapper">
                 <a href="{{ url_for('index') }}" class="brand-logo left">CookEasy</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-user dark"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categories</a></li>
-                        <div id="dropdown1" class="dropdown-content">
-                            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'All-in-one') }}" class="black-text">All-in-one</a></li>
-                            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Cheap Solutions') }}" class="black-text">Cheap Solutions</a></li>
-                            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Baked goods') }}" class="black-text">Baked goods</a></li>
-                            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'For Kids') }}" class="black-text">For Kids</a></li>
-                            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Quick and easy') }}" class="black-text">Quick and easy</a></li>
-                            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Celebration dinners') }}" class="black-text">Celebration dinners</a></li>
-                            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Dishes') }}" class="black-text">Dishes</a></li>
-                            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegetarian') }}" class="black-text">Vegetarian</a></li>
-                            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegan') }}" class="black-text">Vegan</a></li>
-                        </div>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categories</a></li>                        
                     <li><a href="{{ url_for('get_all_recipes') }}">Recipes</a></li>
                     {% if session.user %}
                         <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
@@ -46,26 +54,32 @@
                         <li><a href="{{ url_for('login') }}">Log In</a></li>
                         <li><a href="{{ url_for('register') }}">Register</a></li>
                     {% endif %}
-                </ul>
-
-                
+                </ul>                
             </div>
         </nav>
 
         <!-- mobile sidenavbar -->
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'All-in-one') }}"
+                    class="black-text">All-in-one</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Cheap Solutions') }}" class="black-text">Cheap
+                    Solutions</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Baked goods') }}" class="black-text">Baked
+                    goods</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'For Kids') }}" class="black-text">For Kids</a>
+            </li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Quick and easy') }}" class="black-text">Quick
+                    and easy</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Celebration dinners') }}"
+                    class="black-text">Celebration dinners</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Dishes') }}" class="black-text">Dishes</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegetarian') }}"
+                    class="black-text">Vegetarian</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegan') }}" class="black-text">Vegan</a></li>
+        </ul>
+
         <ul class="sidenav" id="mobile-demo">
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Categories</a></li>
-                <div id="dropdown2" class="dropdown-content">
-                    <li><a href="{{ url_for('categorised_recipes', get_category_name = 'All-in-one') }}" class="black-text">All-in-one</a></li>
-                    <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Cheap Solutions') }}" class="black-text">Cheap Solutions</a></li>
-                    <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Baked goods') }}" class="black-text">Baked goods</a></li>
-                    <li><a href="{{ url_for('categorised_recipes', get_category_name = 'For Kids') }}" class="black-text">For Kids</a></li>
-                    <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Quick and easy') }}" class="black-text">Quick and easy</a></li>
-                    <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Celebration dinners') }}" class="black-text">Celebration dinners</a></li>
-                    <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Dishes') }}" class="black-text">Dishes</a></li>
-                    <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegetarian') }}" class="black-text">Vegetarian</a></li>
-                    <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegan') }}" class="black-text">Vegan</a></li>
-                </div>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Categories</a></li>                
             <li><a href="{{ url_for('get_all_recipes') }}">Recipes</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
