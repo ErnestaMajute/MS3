@@ -4,10 +4,11 @@
     <section class="add-container">
         <div class="container">
             <div class="row">
+                <!-- Edit Recipe form -->
                 <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
                     <div class="card-panel">
                         <h3 class="center">Edit Recipe</h3>
-                        <!-- recipe name/url -->
+                        <!-- Recipe name/image url -->
                         <div class="row">                        
                             <div class="input-field col s12 m6">
                                 <input placeholder="Recipe Name" id="rec_name" name="rec_name" type="text" minlength="4"
@@ -20,7 +21,7 @@
                                 <label for="rec_img">Paste an image address/url</label>
                             </div>
                         </div>
-                        <!-- recipe description -->
+                        <!-- Recipe description -->
                         <div class="row">
                             <div class="input-field col s12">
                                 <input placeholder="Description" id="description" name="description" type="text" minlength="4"
@@ -28,7 +29,7 @@
                                 <label for="description"><strong>Description</strong></label>
                             </div>
                         </div>
-                        <!-- cuisine/category -->
+                        <!-- Cuisine/Category -->
                         <div class="row">
                             <div class="input-field col s6">
                                 <input placeholder="Cuisine" id="cuisine_name" name="cuisine_name" type="text" minlength="3"
@@ -45,7 +46,7 @@
                                 <label for="category_name">Recipe Category</label>
                             </div>
                         </div>
-                        <!-- preparation/cooking time -->
+                        <!-- Preparation/Cooking time -->
                         <div class="row">
                             <div class="input-field col s6">
                                 <input placeholder="20" id="prep_time" name="prep_time" type="text" minlength="1" maxlength="3"
@@ -58,7 +59,7 @@
                                 <label for="cook_time">Cooking Time</label>
                             </div>
                         </div>
-                        <!-- servings/level -->
+                        <!-- Servings/Level -->
                         <div class="row">
                             <div class="input-field col s6">
                                 <select id="level" name="level" class="validate" required>
@@ -75,7 +76,7 @@
                                 <label for="serves">Servings</label>
                             </div>
                         </div>
-                        <!-- ingredients -->
+                        <!-- Ingredients -->
                         <div class="row">
                             <div class="input-field">
                                 <textarea id="ingredients" name="ingredients" class="materialize-textarea validate tooltipped"
@@ -83,7 +84,7 @@
                                 <label for="method">Ingredients *new line for each ingredient</label><br>
                             </div>
                         </div>
-                        <!-- method -->
+                        <!-- Method -->
                         <div class="row">
                             <div class="input-field">
                                 <textarea id="method" name="method" class="materialize-textarea validate tooltipped"
@@ -92,7 +93,7 @@
                             </div>
                         </div>
                         
-                        <!-- add button -->
+                        <!-- Add button -->
                         <div class="row">
                             <button type="submit" class="col s8 offset-s2 btn-large btns-dark">
                                 Add Recipe
