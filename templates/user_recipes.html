@@ -4,22 +4,16 @@
     <section class="profile-container">
         <div class="row">
             <div class="col s12 m8 offset-m2">
+                <!-- Header for user(recipe's creator) -->
                 <h3 class="center-align capitalized black-text">
                     {{ username }}'s recipes
                 </h3>
             </div>
-        </div>
-
-        {% if session.user %}
-            <div class="row center">
-                <a href="{{ url_for('add_recipe') }}" class="btn-floating tooltipped btn-large wine-back"><i class="fas fa-folder-plus prefix center card-icons"></i></a>
-            </div>
-        {% endif %}
-        
+        </div>        
         <div class="container">
             <div class="row">
                 {% for recipe in recipes %}
-        
+                    <!-- User's recipes cards -->
                     <div class="col s12 l6">
                         <div class="card-panel rec-card">
                             <div class="card-main">
@@ -32,12 +26,10 @@
                                         <p class="text">{{ recipe.description }}</p>
                                     </div>
                                 </div>
-                                <div class="">
-                                    <div class="row recipe-footer">
-                                        <p class="col s4 center"><strong>Serves: {{ recipe.serves }}</strong></p>
-                                        <p class="col s4 center"><strong>Cooking time: {{ recipe.cook_time }} min</strong></p>
-                                        <p class="col s4 center"><strong>Level: {{ recipe.level }}</strong></p>
-                                    </div>
+                                <div class="row recipe-footer">
+                                    <p class="col s4 center"><strong>Serves: {{ recipe.serves }}</strong></p>
+                                    <p class="col s4 center"><strong>Cooking time: {{ recipe.cook_time }} min</strong></p>
+                                    <p class="col s4 center"><strong>Level: {{ recipe.level }}</strong></p>
                                 </div>
                             </div>
                         </div>
