@@ -337,7 +337,7 @@ def internal_error(error):
     print(error)
     return render_template(
         'error.html',
-        error_message="You tried to access something, which doesn't exist",
+        error_message="Oops. Something went wrong",
         error_code=500), 500
 
 
