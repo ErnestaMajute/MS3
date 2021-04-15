@@ -4,10 +4,11 @@
     <section class="register-container">
         <div class="container">
             <div class="row">
+                <!-- Registration Form -->
                 <form class="col s12" method="POST" action="{{ url_for('register') }}">
                     <div class="card-panel">
                         <h3 class="center">Join Us</h3>
-                        <!-- first and last name -->
+                        <!-- First and Last name -->
                         <div class="row">
                             <div class="input-field col s12 m6">
                                 <i class="fas fa-user prefix"></i>
@@ -21,7 +22,7 @@
                                 <label for="last_name"></label>
                             </div>
                         </div>
-                        <!-- user name -->
+                        <!-- User name -->
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fas fa-user-circle prefix"></i>
@@ -30,7 +31,7 @@
                                 <label for="username"></label>
                             </div>
                         </div>
-                        <!-- password -->
+                        <!-- Password -->
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fas fa-lock prefix"></i>
@@ -39,12 +40,13 @@
                                 <label for="password"></label>
                             </div>
                         </div>
-                        <!-- register button -->
+                        <!-- Register button -->
                         <div class="row">
                             <button type="submit" class="col s12 btn-large btns-dark">
                                 Register
                             </button>
                         </div>
+                        <!-- If user registred already, link to login -->
                         <div class="row">
                             <div class="col s12 center">
                                 <p>
