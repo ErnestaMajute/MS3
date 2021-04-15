@@ -19,7 +19,7 @@
 
     <header>
         <!-- top navbar -->
-        <ul id="dropdown1" class="dropdown-content">
+        <ul id="categories_list1" class="dropdown-content">
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'All-in-one') }}"
                     class="black-text">All-in-one</a></li>
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Cheap Solutions') }}" class="black-text">Cheap
@@ -43,7 +43,7 @@
                 <a href="{{ url_for('index') }}" class="brand-logo left">CookEasy</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-user dark"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categories</a></li>                        
+                    <li><a class="dropdown-trigger" href="#!" data-target="categories_list1">Categories</a></li>                        
                     <li><a href="{{ url_for('get_all_recipes') }}">Recipes</a></li>
                     {% if session.user %}
                         <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
@@ -59,7 +59,7 @@
         </nav>
 
         <!-- mobile sidenavbar -->
-        <ul id="dropdown2" class="dropdown-content">
+        <ul id="categories_list2" class="dropdown-content">
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'All-in-one') }}"
                     class="black-text">All-in-one</a></li>
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Cheap Solutions') }}" class="black-text">Cheap
@@ -79,7 +79,7 @@
         </ul>
 
         <ul class="sidenav" id="mobile-demo">
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Categories</a></li>                
+            <li><a class="dropdown-trigger" href="#!" data-target="categories_list2">Categories</a></li>                
             <li><a href="{{ url_for('get_all_recipes') }}">Recipes</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
