@@ -4,10 +4,11 @@
     <section class="login-container">
         <div class="container">
             <div class="row">
+                <!-- Login form -->
                 <form class="col s12 login-form" method="POST" action="{{ url_for('login') }}">
                     <div class="card-panel">
                         <h3 class="center dark-liver">Login</h3>
-                        <!-- user name -->
+                        <!-- User name -->
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fas fa-user-circle prefix"></i>
@@ -16,7 +17,7 @@
                                 <label for="username"></label>
                             </div>
                         </div>
-                        <!-- password -->
+                        <!-- Password -->
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="fas fa-lock prefix"></i>
@@ -25,12 +26,13 @@
                                 <label for="password"></label>
                             </div>
                         </div>
-                        <!-- register button -->
+                        <!-- Register button -->
                         <div class="row">
                             <button type="submit" class="col s12 btn-large btns-dark">
                                 Login
                             </button>
                         </div>
+                        <!-- Link for new users if not registered -->
                         <div class="row">
                             <div class="col s12 center">
                                 <p>
