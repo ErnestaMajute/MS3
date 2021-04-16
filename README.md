@@ -1,5 +1,5 @@
 # CookEasy
-![Index page](static/css/images/readme_screenshots/am-i-responsive-cookeasy.png)
+![Index page](static/css/images/readme_screenshots_wireframes/am-i-responsive-cookeasy.png)
 
 [This website](https://em-cookbook.herokuapp.com/index) is a project of website with recipes. Purpose of this project is to let user create, read, update and delete recipes. Non-registred users are able to browse recipes, while registred user are able to create and manipulate their recipes.
 
