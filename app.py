@@ -105,7 +105,7 @@ def user_recipes(user_username):
 def favourites(user):
     """
     Displays user's favourite recipes
-    Functions/add/delete core from
+    Functions favourites/add_favourite/delete_favourite core from
     user https://github.com/Sean-Mc-Mahon/McTasticRecipes
     """
     if is_logged_in():
