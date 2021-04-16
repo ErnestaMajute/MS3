@@ -64,8 +64,12 @@ Note for Assessors:
 
 ## Wireframes and Screenshots
 
-* [Mobile Screenshots](static/css/images/screenshots)
-* [Wireframes](static/css/images/wireframes)
+* [Screenshots](static/css/images/readme_screenshots_wireframes/screenshots)
+    * [Desktop](static/css/images/readme_screenshots_wireframes/screenshots/desktop)    
+    * [Mobile](static/css/images/readme_screenshots_wireframes/screenshots/mobile) 
+* [Wireframes](static/css/images/readme_screenshots_wireframes/wireframes)
+    * [Desktop](static/css/images/readme_screenshots_wireframes/wireframes/desktop)
+    * [Mobile](static/css/images/readme_screenshots_wireframes/wireframes/mobile)
 
 ## Features
 
