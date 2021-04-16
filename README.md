@@ -88,7 +88,7 @@ Note for Assessors:
  
  * Categorised recipes page - contains category's name header and recipes cards, recipes displayed matches category e.g. All-in-one, Cheap Solution, Vegetarian, Vegan...
  
- ![Categorised Recipes page](static/css/images/readme_screenshots/desktop/categorised_recipes-page.png)
+ ![Categorised Recipes page](static/css/images/readme_screenshots_wireframes/screenshots/desktop/categorised_recipes-page.png)
  
  * Recipe page - shows individual recipe, contains image, recipe name, category, creator, cuisine, cooking time, prep-time, servings, ingredients,preparation steps. If user non-registered buttons not provided. If user are not a recipe creator, page provides button with heart/broken-heart icon for user to add or remove recipe to/from his Favourite recipes list. If user is recipe creator, page provides two buttons. One button lets edit recipe, other button with trash bin icon, lets user to delete recipe.
  
