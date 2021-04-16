@@ -1,55 +1,58 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <section class="profile-container">
-        <div class="row">
-            <!-- User's header -->
-            <div class="col s12 m8 offset-m2">
-                <h3 class="center-align capitalized black-text">
-                    {{ user.first_name }}'s Favourites
-                </h3>
-            </div>
+<section class="profile-container">
+    <div class="row">
+        <!-- User's header -->
+        <div class="col s12 m8 offset-m2">
+            <h3 class="center-align capitalized black-text">
+                {{ user.first_name }}'s Favourites
+            </h3>
         </div>
-        <!-- Add Recipe button if user loged in -->
-        {% if session.user %}
-            <div class="row center">
-                <a href="{{ url_for('add_recipe') }}" class="btn-floating tooltipped btn-large wine-back"><i class="fas fa-folder-plus prefix center card-icons"></i></a>
-            </div>
-        {% endif %}
-        
-        <div class="container">
-            <div class="row">
-                <!-- Header if user's Favourites list is empty -->
-                {% if favourites_list|length == 0 %}
-                    <h4 class="center">Your Favourites list is empty.</h4>
-                {% endif %}
-                <!-- Favourite recipes cards -->
-                {% for recipe in userf_recipes %}
-                    <div class="col s12 l6">
-                        <div class="card-panel rec-card">
-                            <div class="card-main">
-                                <div class="row content-margin">
-                                    <div class="recipe-image col s5 m5 center container">
-                                        <img class="img-sizing" alt="{{ recipe.rec_name }}" src="{{ recipe.rec_img }}">
-                                    </div>
-                                    <div class="content-margin col s7 m7 right container">
-                                        <h5 class="recipe-header"><strong><a class="link" href="{{ url_for('recipe', recipe_id=recipe._id) }}">{{ recipe.rec_name }}</a></strong></h5>
-                                        <p class="text">{{ recipe.description }}</p>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="row recipe-footer">
-                                        <p class="col s4 center"><strong>Serves: {{ recipe.serves }}</strong></p>
-                                        <p class="col s4 center"><strong>Cooking time: {{ recipe.cook_time }} min</strong></p>
-                                        <p class="col s4 center"><strong>Level: {{ recipe.level }}</strong></p>
-                                    </div>
-                                </div>
+    </div>
+    <!-- Add Recipe button if user loged in -->
+    {% if session.user %}
+    <div class="row center">
+        <a href="{{ url_for('add_recipe') }}" class="btn-floating tooltipped btn-large wine-back"><i
+                class="fas fa-folder-plus prefix center card-icons"></i></a>
+    </div>
+    {% endif %}
+
+    <div class="container">
+        <div class="row">
+            <!-- Header if user's Favourites list is empty -->
+            {% if favourites_list|length == 0 %}
+            <h4 class="center">Your Favourites list is empty.</h4>
+            {% endif %}
+            <!-- Favourite recipes cards -->
+            {% for recipe in userf_recipes %}
+            <div class="col s12 l6">
+                <div class="card-panel rec-card">
+                    <div class="card-main">
+                        <div class="row content-margin">
+                            <div class="recipe-image col s5 m5 center container">
+                                <img class="img-sizing" alt="{{ recipe.rec_name }}" src="{{ recipe.rec_img }}">
+                            </div>
+                            <div class="content-margin col s7 m7 right container">
+                                <h5 class="recipe-header"><strong><a class="link"
+                                            href="{{ url_for('recipe', recipe_id=recipe._id) }}">{{ recipe.rec_name }}</a></strong>
+                                </h5>
+                                <p class="text">{{ recipe.description }}</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="row recipe-footer">
+                                <p class="col s4 center"><strong>Serves: {{ recipe.serves }}</strong></p>
+                                <p class="col s4 center"><strong>Cooking time: {{ recipe.cook_time }} min</strong></p>
+                                <p class="col s4 center"><strong>Level: {{ recipe.level }}</strong></p>
                             </div>
                         </div>
                     </div>
-                {% endfor %}                
+                </div>
             </div>
+            {% endfor %}
         </div>
-    </section>
+    </div>
+</section>
 
 {% endblock %}

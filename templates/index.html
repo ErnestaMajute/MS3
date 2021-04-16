@@ -1,71 +1,73 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- Parallax container Materialize -->
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <h1 class="main-header center">Recipe Book</h1>
-            <div class="row center">
-                <h5 class="main-header col s12">Store all your recipes in one place</h5><br>
-            </div>
-        </div>
-        <div class="parallax"><img src="static/css/images/index-garlic.jpg" alt="Garlic"></div>
+<!-- Parallax container Materialize -->
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+        <h1 class="main-header center">Recipe Book</h1>
         <div class="row center">
-            <a href="{{ url_for('register') }}" class="btn btns-dark">GET STARTED</a>
+            <h5 class="main-header col s12">Store all your recipes in one place</h5><br>
         </div>
     </div>
-    <!-- Cards with functions descriptions -->
-    <div class="section cards-section center">
-        <div class="row">
-            <div class="col s12 m4 color-fix">
-                <br><br>
-                <i class="fas fa-utensils prefix center card-icons"></i><br>
-                <h4 class="card-header">View Recipes</h4>
-                <span class="black-text">
-                    Browse your favourite recipes in a easy way
-                </span>
-            </div>
-            <div class="col s12 m4 color-fix">
-                <br><br>
-                <i class="fas fa-folder-plus prefix center card-icons"></i><br>
-                <h4 class="card-header">Add New Recipes</h4>
-                <span class="black-text">
-                    Register on Log In and add your recipes.
-                </span>
-            </div>
-            <div class="col s12 m4 color-fix">
-                <br><br>
-                <i class="fas fa-edit prefix center card-icons"></i><br>
-                <h4 class="card-header">Edit Recipes</h4>
-                <span class="black-text">
-                    While you Loged In you can edit or delete your recipes.
-                </span><br><br>
-            </div>
+    <div class="parallax"><img src="static/css/images/index-garlic.jpg" alt="Garlic"></div>
+    <div class="row center">
+        <a href="{{ url_for('register') }}" class="btn btns-dark">GET STARTED</a>
+    </div>
+</div>
+<!-- Cards with functions descriptions -->
+<div class="section cards-section center">
+    <div class="row">
+        <div class="col s12 m4 color-fix">
+            <br><br>
+            <i class="fas fa-utensils prefix center card-icons"></i><br>
+            <h4 class="card-header">View Recipes</h4>
+            <span class="black-text">
+                Browse your favourite recipes in a easy way
+            </span>
+        </div>
+        <div class="col s12 m4 color-fix">
+            <br><br>
+            <i class="fas fa-folder-plus prefix center card-icons"></i><br>
+            <h4 class="card-header">Add New Recipes</h4>
+            <span class="black-text">
+                Register on Log In and add your recipes.
+            </span>
+        </div>
+        <div class="col s12 m4 color-fix">
+            <br><br>
+            <i class="fas fa-edit prefix center card-icons"></i><br>
+            <h4 class="card-header">Edit Recipes</h4>
+            <span class="black-text">
+                While you Loged In you can edit or delete your recipes.
+            </span><br><br>
         </div>
     </div>
-    <!-- Section to promote brand betterkitchen -->
-    <div class="section promotion-section">
-        <div class="row">
-            <h4 class="header s12 wine center">Our Brand:<br></h4>
-            <h2 class="header s12 wine center">betterkitchen</h2>
-        </div>
-        <div class="row">  
-            <div class="col s12 m4"><br><br>
-                <img src="static/css/images/index-plate.jpg" class="responsive" alt="plate">
-            </div>
-            <div class="col s12 m4"><br><br>
-                <img src="static/css/images/index-knifes.jpg" class="responsive" alt="knifes">
-            </div>
-            <div class="col s12 m4"><br><br>
-                <img src="static/css/images/index-glass.jpg" class="responsive" alt="glass">
-            </div>
-        </div>  
-        <div class="row center">
-            <h5 class="promotion-font col s8 offset-s2">Upgrade your kitchen with new gadgets and accessories, created to make kitchen time easier for everyone from master chefs to beginners. Shop pots and pans, knives, bakeware, utensils and more kitchen accessories.</h5>
-        </div>  
-        <div class="row center">
-            <a href="{{ url_for('index') }}" class="btn btns-dark">Visit online store</a>
-        </div>    
+</div>
+<!-- Section to promote brand betterkitchen -->
+<div class="section promotion-section">
+    <div class="row">
+        <h4 class="header s12 wine center">Our Brand:<br></h4>
+        <h2 class="header s12 wine center">betterkitchen</h2>
     </div>
+    <div class="row">
+        <div class="col s12 m4"><br><br>
+            <img src="static/css/images/index-plate.jpg" class="responsive" alt="plate">
+        </div>
+        <div class="col s12 m4"><br><br>
+            <img src="static/css/images/index-knifes.jpg" class="responsive" alt="knifes">
+        </div>
+        <div class="col s12 m4"><br><br>
+            <img src="static/css/images/index-glass.jpg" class="responsive" alt="glass">
+        </div>
+    </div>
+    <div class="row center">
+        <h5 class="promotion-font col s8 offset-s2">Upgrade your kitchen with new gadgets and accessories, created to
+            make kitchen time easier for everyone from master chefs to beginners. Shop pots and pans, knives, bakeware,
+            utensils and more kitchen accessories.</h5>
+    </div>
+    <div class="row center">
+        <a href="{{ url_for('index') }}" class="btn btns-dark">Visit online store</a>
+    </div>
+</div>
 
 {% endblock %}

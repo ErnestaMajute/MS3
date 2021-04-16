@@ -1,49 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <section class="login-container">
-        <div class="container">
-            <div class="row">
-                <!-- Login form -->
-                <form class="col s12 login-form" method="POST" action="{{ url_for('login') }}">
-                    <div class="card-panel">
-                        <h3 class="center dark-liver">Login</h3>
-                        <!-- User name -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="fas fa-user-circle prefix"></i>
-                                <input placeholder="User Name" id="username" name="username" type="text" minlength="4"
-                                    maxlength="20" pattern="^[a-zA-Z0-9]{4,20}$" class="validate" required>
-                                <label for="username"></label>
-                            </div>
-                        </div>
-                        <!-- Password -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <i class="fas fa-lock prefix"></i>
-                                <input placeholder="Password" id="password" name="password" type="password" minlength="5"
-                                    maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>
-                                <label for="password"></label>
-                            </div>
-                        </div>
-                        <!-- Register button -->
-                        <div class="row">
-                            <button type="submit" class="col s12 btn-large btns-dark">
-                                Login
-                            </button>
-                        </div>
-                        <!-- Link for new users if not registered -->
-                        <div class="row">
-                            <div class="col s12 center">
-                                <p>
-                                    Not Registered? <a href="{{ url_for('register') }}">Register Account</a>
-                                </p>
-                            </div>
+<section class="login-container">
+    <div class="container">
+        <div class="row">
+            <!-- Login form -->
+            <form class="col s12 login-form" method="POST" action="{{ url_for('login') }}">
+                <div class="card-panel">
+                    <h3 class="center dark-liver">Login</h3>
+                    <!-- User name -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-user-circle prefix"></i>
+                            <input placeholder="User Name" id="username" name="username" type="text" minlength="4"
+                                maxlength="20" pattern="^[a-zA-Z0-9]{4,20}$" class="validate" required>
+                            <label for="username"></label>
                         </div>
                     </div>
-                </form>
-            </div>
+                    <!-- Password -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-lock prefix"></i>
+                            <input placeholder="Password" id="password" name="password" type="password" minlength="5"
+                                maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>
+                            <label for="password"></label>
+                        </div>
+                    </div>
+                    <!-- Register button -->
+                    <div class="row">
+                        <button type="submit" class="col s12 btn-large btns-dark">
+                            Login
+                        </button>
+                    </div>
+                    <!-- Link for new users if not registered -->
+                    <div class="row">
+                        <div class="col s12 center">
+                            <p>
+                                Not Registered? <a href="{{ url_for('register') }}">Register Account</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
 
 {% endblock %}

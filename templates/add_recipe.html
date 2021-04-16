@@ -1,108 +1,111 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <section class="add-container">
-        <div class="container">
-            <div class="row">
-                <!-- Add Recipe form -->
-                <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
-                    <div class="card-panel">
-                        <h4 class="center">Add Recipe</h4>
-                        <!-- recipe name, image url -->
-                        <div class="row">                        
-                            <div class="input-field col s12 m6">
-                                <input placeholder="Recipe Name" id="rec_name" name="rec_name" type="text" minlength="4"
-                                    class="validate" required>
-                                <label for="rec_name">Recipe Name</label>
-                            </div>
-                            <div class="input-field col s12 m6">
-                                <input placeholder="URL" id="rec_img" name="rec_img" type="text" minlength="3"
-                                    class="validate" required>
-                                <label for="rec_img">Paste an image address/url</label>
-                            </div>
+<section class="add-container">
+    <div class="container">
+        <div class="row">
+            <!-- Add Recipe form -->
+            <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
+                <div class="card-panel">
+                    <h4 class="center">Add Recipe</h4>
+                    <!-- recipe name, image url -->
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <input placeholder="Recipe Name" id="rec_name" name="rec_name" type="text" minlength="4"
+                                class="validate" required>
+                            <label for="rec_name">Recipe Name</label>
                         </div>
-                        <!-- Recipe description -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input placeholder="Description" id="description" name="description" type="text" minlength="4"
-                                    class="validate" required>
-                                <label for="description"><strong>Description</strong></label>
-                            </div>
-                        </div>
-                        <!-- Cuisine/Category -->
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input placeholder="Cuisine" id="cuisine_name" name="cuisine_name" type="text" minlength="3"
-                                    class="validate" required>
-                                <label for="cuisine_name">Cuisine</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <select id="category_name" name="category_name" class="validate" required>
-                                    <option value="" disabled selected>Categories</option>
-                                    {% for category in categories %}
-                                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                                    {% endfor %}
-                                </select>
-                                <label for="category_name">Recipe Category</label>
-                            </div>
-                        </div>
-                        <!-- Preparation/Cooking time -->
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input placeholder="20" id="prep_time" name="prep_time" type="text" minlength="1" maxlength="3"
-                                    pattern="^[0-9]{1,3}$" class="validate" required>
-                                <label for="prep_time">Preparation Time</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input placeholder="30" id="cook_time" name="cook_time" type="text" minlength="1" maxlength="3"
-                                    pattern="^[0-9]{1,3}$" class="validate" required>
-                                <label for="cook_time">Cooking Time</label>
-                            </div>
-                        </div>
-                        <!-- Servings/Level -->
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <select id="level" name="level" class="validate" required>
-                                    <option value="" disabled selected>Choose Level</option>
-                                    <option value="Easy">Easy</option>
-                                    <option value="Medium">Medium</option>
-                                    <option value="Hard">Hard</option>
-                                </select>
-                                <label for="level">Recipe Level</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input placeholder="2" id="serves" name="serves" type="text" minlength="1" maxlength="3"
-                                    pattern="^[0-9]{1,3}$" class="validate" required>
-                                <label for="serves">Servings</label>
-                            </div>
-                        </div>
-                        <!-- Ingredients -->
-                        <div class="row">
-                            <div class="input-field">
-                                <textarea id="ingredients" name="ingredients" class="materialize-textarea validate tooltipped"
-                                    placeholder="*add each ingredient on a new line" data-position="bottom" minlength="10" required></textarea>
-                                <label for="method">Recipe Ingredients </label><br>
-                            </div>
-                        </div>
-                        <!-- Method -->
-                        <div class="row">
-                            <div class="input-field">
-                                <textarea id="method" name="method" class="materialize-textarea validate tooltipped"
-                                    placeholder="*add each step on a new line" data-position="bottom" minlength="10" required></textarea>
-                                <label for="method">Recipe Method </label><br>
-                            </div>
-                        </div>
-                        
-                        <!-- Add button -->
-                        <div class="row">
-                            <button type="submit" class="col s12 btn-large btns-dark">
-                                Add Recipe
-                            </button>
+                        <div class="input-field col s12 m6">
+                            <input placeholder="URL" id="rec_img" name="rec_img" type="text" minlength="3"
+                                class="validate" required>
+                            <label for="rec_img">Paste an image address/url</label>
                         </div>
                     </div>
-                </form>
-            </div>
+                    <!-- Recipe description -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="Description" id="description" name="description" type="text"
+                                minlength="4" class="validate" required>
+                            <label for="description"><strong>Description</strong></label>
+                        </div>
+                    </div>
+                    <!-- Cuisine/Category -->
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="Cuisine" id="cuisine_name" name="cuisine_name" type="text" minlength="3"
+                                class="validate" required>
+                            <label for="cuisine_name">Cuisine</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <select id="category_name" name="category_name" class="validate" required>
+                                <option value="" disabled selected>Categories</option>
+                                {% for category in categories %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="category_name">Recipe Category</label>
+                        </div>
+                    </div>
+                    <!-- Preparation/Cooking time -->
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="20" id="prep_time" name="prep_time" type="text" minlength="1"
+                                maxlength="3" pattern="^[0-9]{1,3}$" class="validate" required>
+                            <label for="prep_time">Preparation Time</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input placeholder="30" id="cook_time" name="cook_time" type="text" minlength="1"
+                                maxlength="3" pattern="^[0-9]{1,3}$" class="validate" required>
+                            <label for="cook_time">Cooking Time</label>
+                        </div>
+                    </div>
+                    <!-- Servings/Level -->
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <select id="level" name="level" class="validate" required>
+                                <option value="" disabled selected>Choose Level</option>
+                                <option value="Easy">Easy</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Hard">Hard</option>
+                            </select>
+                            <label for="level">Recipe Level</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input placeholder="2" id="serves" name="serves" type="text" minlength="1" maxlength="3"
+                                pattern="^[0-9]{1,3}$" class="validate" required>
+                            <label for="serves">Servings</label>
+                        </div>
+                    </div>
+                    <!-- Ingredients -->
+                    <div class="row">
+                        <div class="input-field">
+                            <textarea id="ingredients" name="ingredients"
+                                class="materialize-textarea validate tooltipped"
+                                placeholder="*add each ingredient on a new line" data-position="bottom" minlength="10"
+                                required></textarea>
+                            <label for="method">Recipe Ingredients </label><br>
+                        </div>
+                    </div>
+                    <!-- Method -->
+                    <div class="row">
+                        <div class="input-field">
+                            <textarea id="method" name="method" class="materialize-textarea validate tooltipped"
+                                placeholder="*add each step on a new line" data-position="bottom" minlength="10"
+                                required></textarea>
+                            <label for="method">Recipe Method </label><br>
+                        </div>
+                    </div>
+
+                    <!-- Add button -->
+                    <div class="row">
+                        <button type="submit" class="col s12 btn-large btns-dark">
+                            Add Recipe
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
 
 {% endblock %}

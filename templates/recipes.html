@@ -1,64 +1,67 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <section class="recipes-container">
-        <div class=" container intro-container">
-            <h3 class="center-align text-shadow wine">All Recipes</h3>
-            <div class="row grey lighten-5">
-                <!-- Form to search recipes -->
-                <form action="{{ url_for('search') }}" method="POST" class="col s12">
-                    <div class="row margin-fix center-align">
-                        <div class="input-field col s12 m8">
-                            <i class="fas fa-search prefix"></i>
-                            <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                            <label for="query">Search Recipe</label>
-                        </div>
-                        <div class="col s12 m4 buttons-col">
-                            <!-- Button to reset results -->
-                            <a href="{{ url_for('get_all_recipes') }}" class="wine-back btn">Reset</a>
-                            <!-- Button for searching -->
-                            <button type="submit" class="wine-back btn">
-                                Search
-                            </button>
-                        </div>
+<section class="recipes-container">
+    <div class=" container intro-container">
+        <h3 class="center-align text-shadow wine">All Recipes</h3>
+        <div class="row grey lighten-5">
+            <!-- Form to search recipes -->
+            <form action="{{ url_for('search') }}" method="POST" class="col s12">
+                <div class="row margin-fix center-align">
+                    <div class="input-field col s12 m8">
+                        <i class="fas fa-search prefix"></i>
+                        <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                        <label for="query">Search Recipe</label>
                     </div>
-                </form>
-            </div>
-            <!-- Add Recipe button if user loged in -->
-            {% if session.user %}
-                <div class="row center">
-                    <a href="{{ url_for('add_recipe') }}" class="btn-floating tooltipped btn-large wine-back"><i class="fas fa-folder-plus prefix center card-icons"></i></a>
-                </div>   
-            {% endif %}    
+                    <div class="col s12 m4 buttons-col">
+                        <!-- Button to reset results -->
+                        <a href="{{ url_for('get_all_recipes') }}" class="wine-back btn">Reset</a>
+                        <!-- Button for searching -->
+                        <button type="submit" class="wine-back btn">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
+        <!-- Add Recipe button if user loged in -->
+        {% if session.user %}
+        <div class="row center">
+            <a href="{{ url_for('add_recipe') }}" class="btn-floating tooltipped btn-large wine-back"><i
+                    class="fas fa-folder-plus prefix center card-icons"></i></a>
+        </div>
+        {% endif %}
+    </div>
 
-        <div class="container">
-            <div class="row">
-                <!-- Cards for recipes -->                
-                 {% for recipe in recipes %}
-                    <div class="col s12 l6">
-                        <div class="card-panel rec-card">
-                            <div class="card-main">
-                                <div class="row content-margin">
-                                    <div class="recipe-image col s5 m5 center container">
-                                        <img class="img-sizing" alt="{{ recipe.rec_name }}" src="{{ recipe.rec_img }}">
-                                    </div>
-                                    <div class="content-margin col s7 m7 right container">
-                                        <h5 class="recipe-header"><strong><a class="link" href="{{ url_for('recipe', recipe_id=recipe._id) }}">{{ recipe.rec_name }}</a></strong></h5>
-                                        <p class="text">{{ recipe.description }}</p>
-                                    </div>
-                                </div>
-                                <div class="row recipe-footer">
-                                    <p class="col s4 center"><strong>Serves: {{ recipe.serves }}</strong></p>
-                                    <p class="col s4 center"><strong>Cooking time: {{ recipe.cook_time }} min</strong></p>
-                                    <p class="col s4 center"><strong>Level: {{ recipe.level }}</strong></p>
-                                </div>
+    <div class="container">
+        <div class="row">
+            <!-- Cards for recipes -->
+            {% for recipe in recipes %}
+            <div class="col s12 l6">
+                <div class="card-panel rec-card">
+                    <div class="card-main">
+                        <div class="row content-margin">
+                            <div class="recipe-image col s5 m5 center container">
+                                <img class="img-sizing" alt="{{ recipe.rec_name }}" src="{{ recipe.rec_img }}">
+                            </div>
+                            <div class="content-margin col s7 m7 right container">
+                                <h5 class="recipe-header"><strong><a class="link"
+                                            href="{{ url_for('recipe', recipe_id=recipe._id) }}">{{ recipe.rec_name }}</a></strong>
+                                </h5>
+                                <p class="text">{{ recipe.description }}</p>
                             </div>
                         </div>
+                        <div class="row recipe-footer">
+                            <p class="col s4 center"><strong>Serves: {{ recipe.serves }}</strong></p>
+                            <p class="col s4 center"><strong>Cooking time: {{ recipe.cook_time }} min</strong></p>
+                            <p class="col s4 center"><strong>Level: {{ recipe.level }}</strong></p>
+                        </div>
                     </div>
-                {% endfor %}
+                </div>
             </div>
+            {% endfor %}
         </div>
-    </section>
-    
+    </div>
+</section>
+
 {% endblock %}
