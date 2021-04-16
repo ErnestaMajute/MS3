@@ -3,6 +3,8 @@
 
 [This website](https://em-cookbook.herokuapp.com/index) is a project of website with recipes. Purpose of this project is to let user create, read, update and delete recipes. Non-registred users are able to browse recipes, while registred user are able to create and manipulate their recipes.
 
+This project was really exciting experience for me. I enjoyed every minute and this project is my pride and joy.
+
 ## UX
 
 
@@ -358,7 +360,9 @@ After these steps, CookEasy is now deployed to Heroku and can be viewed [here.](
 ## Credits
 
 ### Content
-Recipes:
+
+* Recipes:
+
 https://www.bbcgoodfood.com/recipes/sticky-chinese-chicken-traybake
 https://www.bbcgoodfood.com/recipes/mustard-chicken-leek-one-pot
 https://www.bbcgoodfood.com/recipes/tuna-pasta-bake
@@ -369,11 +373,20 @@ https://www.bbcgoodfood.com/recipes/omelette-bun
 https://gatherforbread.com/german-soft-pretzel-sticks/
 https://deliciouslysprinkled.com/soft-sugar-cookies/
 
-Background and recipe images were found in [www.pexels.com](https://www.pexels.com/)
-Big thanks Karolina Grabowska, her pictures were used for backgrounds.
-http://ami.responsivedesign.is/# to check responsiveness
+* Errors image from https://www.freepik.com/photos/background
 
-Python functions which were taken from miniProject: TaskManager by CodeInstitute marked in app.py file
+* Background and recipe images:
+were found in [www.pexels.com](https://www.pexels.com/)
+
+Big thanks Karolina Grabowska, her pictures were used for backgrounds (in pexels.com).
+
+* http://ami.responsivedesign.is/# to check responsiveness
+
+* Python functions which were taken from miniProject: TaskManager by CodeInstitute marked in app .py file
+I used piece 
+
+* Functions favourites/add_favourite/delete_favourite pieces of code from user https://github.com/Sean-Mc-Mahon/McTasticRecipes marked in app .py file
+
 
 ## Acknowledgments
 I would like to thank my family for helping me to test this website. Also big thanks to my mentor Reuben Ferrante who helped me a lot during this project.
