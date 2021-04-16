@@ -24,20 +24,26 @@
         <ul id="categories_list1" class="dropdown-content">
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'All-in-one') }}"
                     class="black-text">All-in-one</a></li>
-            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Cheap Solutions') }}" class="black-text">Cheap
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Cheap Solutions') }}"
+                    class="black-text">Cheap
                     Solutions</a></li>
-            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Baked goods') }}" class="black-text">Baked
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Baked goods') }}"
+                    class="black-text">Baked
                     goods</a></li>
-            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'For Kids') }}" class="black-text">For Kids</a>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'For Kids') }}" class="black-text">For
+                    Kids</a>
             </li>
-            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Quick and easy') }}" class="black-text">Quick
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Quick and easy') }}"
+                    class="black-text">Quick
                     and easy</a></li>
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Celebration dinners') }}"
                     class="black-text">Celebration dinners</a></li>
-            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Dishes') }}" class="black-text">Dishes</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Dishes') }}"
+                    class="black-text">Dishes</a></li>
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegetarian') }}"
                     class="black-text">Vegetarian</a></li>
-            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegan') }}" class="black-text">Vegan</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegan') }}" class="black-text">Vegan</a>
+            </li>
         </ul>
         <!-- Navigation bar Materialize -->
         <nav class="nav-extended">
@@ -46,18 +52,18 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-user dark"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <!-- Dropdown trigger -->
-                    <li><a class="dropdown-trigger" href="#!" data-target="categories_list1">Categories</a></li>                        
+                    <li><a class="dropdown-trigger" href="#!" data-target="categories_list1">Categories</a></li>
                     <li><a href="{{ url_for('get_all_recipes') }}">Recipes</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                        <li><a href="{{ url_for('favourites', user=session.user) }}">Favourites</a></li>
-                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                    <li><a href="{{ url_for('favourites', user=session.user) }}">Favourites</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
-                        <li><a href="{{ url_for('login') }}">Log In</a></li>
-                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
                     {% endif %}
-                </ul>                
+                </ul>
             </div>
         </nav>
 
@@ -65,34 +71,40 @@
         <ul id="categories_list2" class="dropdown-content">
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'All-in-one') }}"
                     class="black-text">All-in-one</a></li>
-            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Cheap Solutions') }}" class="black-text">Cheap
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Cheap Solutions') }}"
+                    class="black-text">Cheap
                     Solutions</a></li>
-            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Baked goods') }}" class="black-text">Baked
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Baked goods') }}"
+                    class="black-text">Baked
                     goods</a></li>
-            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'For Kids') }}" class="black-text">For Kids</a>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'For Kids') }}" class="black-text">For
+                    Kids</a>
             </li>
-            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Quick and easy') }}" class="black-text">Quick
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Quick and easy') }}"
+                    class="black-text">Quick
                     and easy</a></li>
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Celebration dinners') }}"
                     class="black-text">Celebration dinners</a></li>
-            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Dishes') }}" class="black-text">Dishes</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Dishes') }}"
+                    class="black-text">Dishes</a></li>
             <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegetarian') }}"
                     class="black-text">Vegetarian</a></li>
-            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegan') }}" class="black-text">Vegan</a></li>
+            <li><a href="{{ url_for('categorised_recipes', get_category_name = 'Vegan') }}" class="black-text">Vegan</a>
+            </li>
         </ul>
         <!-- Mobile sidenavbar Materialize -->
         <ul class="sidenav" id="mobile-demo">
             <!-- Dropdown trigger -->
-            <li><a class="dropdown-trigger" href="#!" data-target="categories_list2">Categories</a></li>                
+            <li><a class="dropdown-trigger" href="#!" data-target="categories_list2">Categories</a></li>
             <li><a href="{{ url_for('get_all_recipes') }}">Recipes</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a href="{{ url_for('favourites', user=session.user) }}">Favourites</a></li>
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+            <li><a href="{{ url_for('favourites', user=session.user) }}">Favourites</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
         </ul>
     </header>
@@ -100,16 +112,15 @@
     <section>
         <!-- Flash messages -->
         {% with messages = get_flashed_messages() %}
-            {% if messages  %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h5 class="flashes-bck white-text center-align">{{ message }}</h5>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages  %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h5 class="flashes-bck white-text center-align">{{ message }}</h5>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
-
 
     {% block content %}
     {% endblock %}
@@ -121,22 +132,27 @@
                     <h5 class="white-text">CookEasy</h5>
                     <p><i class="fas fa-map-marker-alt footer-icons"></i> Unit 15 Parkwest Ent Ctr, 12 Dublin</p>
                     <p><i class="fas fa-envelope footer-icons"></i> contact@cookeasy.com</p>
-                    <p><i class="fas fa-phone-alt footer-icons"></i> (01)4623444</p> 
+                    <p><i class="fas fa-phone-alt footer-icons"></i> (01)4623444</p>
                 </div>
-                
+
                 <div class="col l4 s12">
                     <h5 class="white-text"><strong>Follow CookEasy</strong></h5>
                     <ul>
-                        <li><a href="https://www.facebook.com/" class="footer-icons" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.twitter.com/" class="footer-icons" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="https://www.instagram.com/" class="footer-icons" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://www.youtube.com/" class="footer-icons" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://www.facebook.com/" class="footer-icons" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.twitter.com/" class="footer-icons" target="_blank"><i
+                                    class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/" class="footer-icons" target="_blank"><i
+                                    class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/" class="footer-icons" target="_blank"><i
+                                    class="fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
                 <div class="col l4 s12">
                     <h5 class="white-text">betterkitchen</h5>
                     <p class="grey-text text-lighten-4">
-                        <i class="fas fa-map-marker-alt footer-icons"></i> Tramway Ct Old Blessington Rd Tallaght Village Dublin 24<br>
+                        <i class="fas fa-map-marker-alt footer-icons"></i> Tramway Ct Old Blessington Rd Tallaght
+                        Village Dublin 24<br>
                     </p>
                     <p><i class="fas fa-phone-alt footer-icons"></i> (01)4623392</p>
                     <p><i class="fas fa-envelope footer-icons"></i> contact@betterkitchen.com</p>
@@ -146,10 +162,12 @@
         <div class="footer-copyright">
             <div class="container">
                 © 2021 Copyright
-                <a class="grey-text text-lighten-4 right" href="https://www.freepik.com/photos/background">Background photo created by rawpixel.com - www.freepik.com</a>
+                <a class="grey-text text-lighten-4 right" href="https://www.freepik.com/photos/background">Background
+                    photo created by rawpixel.com - www.freepik.com</a>
             </div>
         </div>
     </footer>
+
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
@@ -157,7 +175,6 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
-
 
 </body>
 
