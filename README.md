@@ -8,6 +8,10 @@
 
 Goal of this website is to provide users with visually appealing recipe website, where user would be able to navigate easily. As well website promotes a brand of cooking accessories.
 
+Note for Assessors:
+* Username: admin
+* Password: adminas
+
 #### User Stories:
 
 1. As a non-registered user I would like to browse recipes.
