@@ -73,26 +73,46 @@ Note for Assessors:
 
  * Navbar - provides easy navigation thru the webpage, for non-registred/registred users. By using navbar user can go to any page of website. Contains logo CookEasy link, which link to index page.
  * Index page - welcomes new and current users, provides information what users can do on website. Top section greets and provides button for registration Index page promotes brand betterkichen, contains button (for design purposes, no link) to link users to betterkitchen website.
-    * ![Index page](static/css/images/readme_screenshots/index-page.png)
+ 
+ ![Index page](static/css/images/readme_screenshots_wireframes/screenshots/desktop/index-page.png)
+
  * Recipes page - contains all users recipes which currently in database. Each recipe has a card, which contains recipe image, name, small description, number of servings, cooking time, difficulty level. Recipe name links to individual recipe view.
-    * ![Recipes page](static/css/images/readme_screenshots/recipes-page.png)
+ 
+ ![Recipes page](static/css/images/readme_screenshots_wireframes/screenshots/desktop/recipes-page.png)
+ 
  * Categorised recipes page - contains category's name header and recipes cards, recipes displayed matches category e.g. All-in-one, Cheap Solution, Vegetarian, Vegan...
-    * ![Categorised Recipes page](static/css/images/readme_screenshots/categorised_recipes-page.png)
+ 
+ ![Categorised Recipes page](static/css/images/readme_screenshots/desktop/categorised_recipes-page.png)
+ 
  * Recipe page - shows individual recipe, contains image, recipe name, category, creator, cuisine, cooking time, prep-time, servings, ingredients,preparation steps. If user non-registered buttons not provided. If user are not a recipe creator, page provides button with heart/broken-heart icon for user to add or remove recipe to/from his Favourite recipes list. If user is recipe creator, page provides two buttons. One button lets edit recipe, other button with trash bin icon, lets user to delete recipe.
-    * ![Recipe page](static/css/images/readme_screenshots/recipe-page.png)
+ 
+ ![Recipe page](static/css/images/readme_screenshots_wireframes/screenshots/desktop/recipe-page.png)
+ 
  * User Recipes page - when user opens individual recipe, she/he can click on created by: link, which links to recipe's creator profile. Which contains all creator's recipes. Page displays user's header, and recipes cards.
-    * ![User recipes page](static/css/images/readme_screenshots/user_recipes-page.png)
+ 
+ ![User recipes page](static/css/images/readme_screenshots_wireframes/screenshots/desktop/user_recipes-page.png)
+ 
  * Profile page - contains header, button with folder icon to add recipe. Heart icon button to link user to his/hers Favourite recipes page.
-    * ![Profile page](static/css/images/readme_screenshots/profile-page.png)
+ 
+ ![Profile page](static/css/images/readme_screenshots_wireframes/screenshots/desktop/profile-page.png)
+ 
  * Favourites page - only if user registered he/she can have Favourite recipes page. Contains header, button to add recipe and recipe card with Favourite recipes.
-    * ![Favourites page](static/css/images/readme_screenshots/favourites-page.png)
+ 
+ ![Favourites page](static/css/images/readme_screenshots_wireframes/screenshots/desktop/favourites-page.png)
+ 
  * Add/Edit recipe pages - add recipe page has form with input fields for user to fill in new recipe details, and add recipe button. Edit recipe also contains same form, but imput fields already has content which can be modified, also contains add recipe button.
-    * ![Add Recipe page](static/css/images/readme_screenshots/add_recipe-page.png)
-    * ![Edit Recipe page](static/css/images/readme_screenshots/edit_recipes-page.png)
+ 
+ ![Add Recipe page](static/css/images/readme_screenshots_wireframes/screenshots/desktop/add_recipe-page.png)
+ 
+ ![Edit Recipe page](static/css/images/readme_screenshots_wireframes/screenshots/desktop/edit_recipes-page.png)
+ 
  * Register page - contains form where new user can fill in his details and create an account. Form has a link on the bottom for user to log in if she/he already registered to a website. Form also contains Register button.
-    * ![Register page](static/css/images/readme_screenshots/register-page.png)
+ 
+ ![Register page](static/css/images/readme_screenshots_wireframes/screenshots/desktop/register-page.png)
+ 
  * Login page - displays form where registered user can fill in his username and password and login to profile. Form has a link to a registration page on the bottom, for non-registered users. Form has login button.
-    * ![Login page](static/css/images/readme_screenshots/login-page.png)
+ 
+ ![Login page](static/css/images/readme_screenshots_wireframes/screenshots/desktop/login-page.png)
  * Footer - displays CookEasy address, phone number, and email with icons, social media links. Footer has contact details for betterkithen (promoted brand) shop. 
 
  ### Future Features
