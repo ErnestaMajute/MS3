@@ -105,6 +105,8 @@ def user_recipes(user_username):
 def favourites(user):
     """
     Displays user's favourite recipes
+    Functions/add/delete core from
+    user https://github.com/Sean-Mc-Mahon/McTasticRecipes
     """
     if is_logged_in():
         user = mongo.db.users.find_one({"username": user})
