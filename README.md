@@ -212,6 +212,7 @@ Note for Assessors:
  * [Flask](https://palletsprojects.com/p/flask/)
  * [Jinja](https://palletsprojects.com/p/jinja/)
  * [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
+ * [JQuery](https://jquery.com/)
 
 ### Tools
 
